@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="header hero">
+  <header class="header hero" aria-label="Header" id="header">
     <div class="hero-head">
       <div class="navbar">
         <div class="container">
@@ -33,7 +33,7 @@
               <span class="navbar-item">
                 <a class="button is-white is-outlined">
                   <span class="icon">
-                    <i class="fa fa-home"></i>
+                    <span class="fa fa-home"></span>
                   </span>
                   <span>Home</span>
                 </a>
@@ -41,7 +41,7 @@
               <span class="navbar-item">
                 <a class="button is-white is-outlined">
                   <span class="icon">
-                    <i class="fab fa-superpowers"></i>
+                    <span class="fab fa-superpowers"></span>
                   </span>
                   <span>Examples</span>
                 </a>
@@ -49,7 +49,7 @@
               <span class="navbar-item">
                 <a class="button is-white is-outlined">
                   <span class="icon">
-                    <i class="fa fa-book"></i>
+                    <span class="fa fa-book"></span>
                   </span>
                   <span>Documentation</span>
                 </a>
@@ -57,7 +57,7 @@
               <span class="navbar-item">
                 <a class="button is-white is-outlined">
                   <span class="icon">
-                    <i class="fab fa-github"></i>
+                    <span class="fab fa-github"></span>
                   </span>
                   <span>View Source</span>
                 </a>
@@ -73,11 +73,11 @@
 
   <main id="main-content">
 
-    <section class="hero hero-bg is-fullheight">
+    <section class="hero hero-bg is-fullheight" aria-labelledby="engineering-future" id="engineering">
       <div class="hero-body">
         <article class="container has-text-centered">
           <div class="column is-6 is-offset-3">
-            <header class="title has-text-white">Engineering the Future</header>
+            <h1 class="title has-text-white" id="engineering-future">Engineering the Future</h1>
             <div class="subtitle has-text-white">
               $this is the best software platform for running an internet business. We handle billions of dollars every
               year for forward-thinking businesses around the world.
@@ -85,7 +85,8 @@
             <section class="box">
               <div class="field is-grouped">
                 <p class="control is-expanded">
-                  <input class="input">
+                  <label for="notify" class="visually-hidden">Input your email</label>
+                  <input class="input" id="notify">
                 </p>
                 <p class="control">
                   <a class="button is-info">Notify Me</a>
@@ -104,14 +105,14 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="about-us" id="about">
       <div class="section-heading has-text-centered">
-        <header class="title is-2">About Us</header>
+        <header class="title is-2" id="about-us">About Us</header>
         <div class="subtitle is-5">We of all trades, master of "some"</div>
         <section class="container">
-          <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
+          <p>Web developers with more than <strong>4 years</strong> of well-rounded experience with a degree in the
             field of
-            <b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Coffee</b>.
+            <strong>Computer Science</strong>, extensive knowledge of modern Web techniques and love for <strong>Coffee</strong>.
             Looking for an opportunity to work and upgrade, as well as being involved in an organization that
             believes
             in gaining a competitive edge and giving back to the community.</p>
@@ -172,7 +173,7 @@
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <b>JavaScript:</b>
+                        <strong>JavaScript:</strong>
                         <br>
                         <progress class="progress is-primary" value="90" max="100"></progress>
                       </p>
@@ -184,7 +185,7 @@
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <b>Vue.js:</b>
+                        <strong>Vue.js:</strong>
                         <br>
                         <progress class="progress is-primary" value="90" max="100"></progress>
                       </p>
@@ -196,7 +197,7 @@
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <b>Node.js:</b>
+                        <strong>Node.js:</strong>
                         <br>
                         <progress class="progress is-primary" value="75" max="100"></progress>
                       </p>
@@ -208,7 +209,7 @@
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <b>HTML5/CSS3:</b>
+                        <strong>HTML5/CSS3:</strong>
                         <br>
                         <progress class="progress is-primary" value="95" max="100"></progress>
                       </p>
@@ -220,7 +221,7 @@
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <b>Databases:</b>
+                        <strong>Databases:</strong>
                         <br>
                         <progress class="progress is-primary" value="66" max="100"></progress>
                       </p>
@@ -235,7 +236,7 @@
       </div>
     </section>
 
-    <section class="has-background-danger">
+    <section class="has-background-danger" aria-label="Numbers" id="numbers">
       <div class="info-tiles container">
         <div class="tile is-ancestor has-text-centered">
           <div class="tile is-parent">
@@ -266,10 +267,10 @@
       </div>
     </section>
 
-    <section class="hero has-background-grey-light">
+    <section class="hero has-background-grey-light" aria-labelledby="key-features" id="features">
       <div class="container features">
         <header class="section-heading has-text-centered">
-          <div class="title is-2">Three key features</div>
+          <div class="title is-2" id="key-features">Three key features</div>
           <div class="subtitle is-5">We don't hide what we do</div>
         </header>
 
@@ -278,7 +279,7 @@
           <article class="column is-4">
             <div class="card is-shady">
               <aside class="card-image has-text-centered">
-                <i class="fa fa-paw"></i>
+                <span class="fa fa-paw"></span>
               </aside>
               <section class="card-content">
                 <header>Tristique senectus et netus et.</header>
@@ -295,7 +296,7 @@
           <article class="column is-4">
             <div class="card is-shady">
               <aside class="card-image has-text-centered">
-                <i class="fab fa-empire"></i>
+                <span class="fab fa-empire"></span>
               </aside>
               <section class="card-content">
                 <header>Tempor orci dapibus ultrices in.</header>
@@ -313,7 +314,7 @@
           <article class="column is-4">
             <div class="card is-shady">
               <aside class="card-image has-text-centered">
-                <i class="fab fa-apple"></i>
+                <span class="fab fa-apple"></span>
               </aside>
               <section class="card-content">
                 <header> Leo integer malesuada nunc vel risus. </header>
@@ -331,10 +332,10 @@
       </div>
     </section>
 
-    <section class="hero is-info">
+    <section class="hero is-info" aria-labelledby="list-topics" id="topics">
       <div class="hero-body">
         <header class="container">
-          <div class="title">List of topics</div>
+          <div class="title" id="list-topics">List of topics</div>
           <div class="subtitle">We are always in touch we the outside world</div>
         </header>
       </div>
@@ -342,25 +343,25 @@
         <ul>
           <li data-target="pane-1" id="1">
             <a>
-              <span class="icon is-small"><i class="fa fa-image"></i></span>
+              <span class="icon is-small"><span class="fa fa-image"></span></span>
               <span>Pictures</span>
             </a>
           </li>
           <li data-target="pane-2" id="2" class="is-active">
             <a>
-              <span class="icon is-small"><i class="fab fa-empire"></i></span>
+              <span class="icon is-small"><span class="fab fa-empire"></span></span>
               <span>Article</span>
             </a>
           </li>
           <li data-target="pane-3" id="3">
             <a>
-              <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+              <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
               <span>Team</span>
             </a>
           </li>
           <li data-target="pane-4" id="4">
             <a>
-              <span class="icon is-small"><i class="fa fa-film"></i></span>
+              <span class="icon is-small"><span class="fa fa-film"></span></span>
               <span>Video</span>
             </a>
           </li>
@@ -368,7 +369,7 @@
       </div>
     </section>
 
-    <section class="section tab-content container">
+    <section class="section tab-content container" aria-label="Topic Tabs" id="tabs">
 
       <div class="tab-pane" id="pane-1" class="level">
         <div class="container">
@@ -452,7 +453,7 @@
 
           <article>
             <header class="is-2 title">Second level</header>
-            <p>Curabitur accumsan turpis pharetra <b>augue tincidunt</b> blandit. Quisque condimentum maximus mi, sit
+            <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit
               amet
               commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem
               rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
@@ -583,12 +584,12 @@
           <div class="column">
             <article class="media">
               <aside class="media-left">
-                <i class="fab fa-github-square fa-4x"></i>
+                <span class="fab fa-github-square fa-4x"></span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header>
-                    <a><b>Dominic Ipsum</b></a>
+                    <a><strong>Dominic Ipsum</strong></a>
                   </header>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
@@ -600,12 +601,12 @@
 
             <article class="media">
               <aside class="media-left">
-                <i class="fab fa-empire fa-4x"></i>
+                <span class="fab fa-empire fa-4x"></span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header>
-                    <a><b>Cassie Ipsum</b></a>
+                    <a><strong>Cassie Ipsum</strong></a>
                   </header>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
@@ -618,12 +619,12 @@
           <div class="column">
             <article class="media">
               <aside class="media-left">
-                <i class="fab fa-ravelry fa-4x"></i>
+                <span class="fab fa-ravelry fa-4x"></span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header>
-                    <a><b>Avery Ipsum</b></a>
+                    <a><strong>Avery Ipsum</strong></a>
                   </header>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
@@ -635,12 +636,12 @@
 
             <article class="media">
               <aside class="media-left">
-                <i class="fab fa-github-alt fa-4x"></i>
+                <span class="fab fa-github-alt fa-4x"></span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header>
-                    <a><b>io Ipsum</b></a>
+                    <a><strong>io Ipsum</strong></a>
                   </header>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
@@ -659,8 +660,8 @@
             <article>
               <header class="title has-text-centered">Inspired video</header>
               <section class="embed-container image">
-                <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen
-                  mozallowfullscreen allowFullScreen></iframe>
+                <iframe src="https://player.vimeo.com/video/261794608" webkitAllowFullScreen mozallowfullscreen
+                  allowFullScreen></iframe>
               </section>
             </article>
           </div>
@@ -669,10 +670,10 @@
 
     </section>
 
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="our-tours" id="tours">
       <div class="container has-text-centered">
         <header class="section-heading has-text-centered">
-          <div class="title is-2">Tours</div>
+          <div class="title is-2" id="our-tours">Tours</div>
           <div class="subtitle is-5">Outcoming dates for the best options</div>
         </header>
 
@@ -752,9 +753,9 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="our-services" id="services">
       <header class="section-heading has-text-centered">
-        <div class="title is-2">Services</div>
+        <div class="title is-2" id="our-services">Services</div>
         <div class="subtitle is-5">What can I do for you?</div>
       </header>
 
@@ -803,10 +804,10 @@
       </div>
     </section>
 
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="our-portfolio" id="portfolio">
       <div class="container">
         <header class="section-heading has-text-centered">
-          <div class="title is-2">Portfolio</div>
+          <div class="title is-2" id="our-portfolio">Portfolio</div>
           <div class="subtitle is-5">Our latest works</div>
         </header>
 
@@ -816,7 +817,7 @@
               <article class="card">
                 <header class="card-header">
                   <p class="card-header-title">
-                    <span>Admin <small>(Light)</small></span>
+                    <span>Admin (Light)</span>
                     <span class="is-pulled-right">
                       <a>
                         <span class="tag is-default">v0.7.2</span>
@@ -975,10 +976,10 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="our-forum" id="forum">
       <div class="container">
         <header class="section-heading has-text-centered">
-          <div class="title is-2">Forum</div>
+          <div class="title is-2" id="our-forum">Forum</div>
           <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
         </header>
 
@@ -1018,7 +1019,7 @@
                     </div>
                   </section>
                   <aside class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
+                    <span class="has-text-grey-light"><span class="fa fa-comments"></span> 1</span>
                   </aside>
                 </section>
               </article>
@@ -1042,7 +1043,7 @@
                     </div>
                   </section>
                   <aside class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 0</span>
+                    <span class="has-text-grey-light"><span class="fa fa-comments"></span> 0</span>
                   </aside>
                 </section>
               </article>
@@ -1066,7 +1067,7 @@
                     </div>
                   </section>
                   <aside class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 13</span>
+                    <span class="has-text-grey-light"><span class="fa fa-comments"></span> 13</span>
                   </aside>
                 </section>
               </article>
@@ -1090,7 +1091,7 @@
                     </div>
                   </section>
                   <aside class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                    <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
                   </aside>
                 </section>
               </article>
@@ -1114,7 +1115,7 @@
                     </div>
                   </section>
                   <aside class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                    <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
                   </aside>
                 </section>
               </article>
@@ -1138,7 +1139,7 @@
                     </div>
                   </section>
                   <aside class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                    <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
                   </aside>
                 </section>
               </article>
@@ -1148,103 +1149,124 @@
       </div>
     </section>
 
-    <section class="section has-background-light">
+    <section class="section has-background-light" aria-labelledby="contact-us" id="contact">
       <div class="container">
         <header class="section-heading has-text-centered">
-          <div class="title is-2">Contact us</div>
+          <div class="title is-2" id="contact-us">Contact us</div>
           <div class="subtitle is-5">Don't hesitate, ask anything</div>
         </header>
 
         <form class="column is-half is-offset-one-quarter box">
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
 
-          <div class="field">
-            <label class="label">Username</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text">
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </div>
-            <p class="help is-success">This username is available</p>
-          </div>
+          <fieldset>
+            <legend class="visually-hidden">User Related Fields</legend>
 
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
-              </span>
-            </div>
-            <p class="help is-danger">This email is invalid</p>
-          </div>
-
-          <div class="field">
-            <label class="label">Subject</label>
-            <div class="control">
-              <div class="select">
-                <select>
-                  <option>Select dropdown</option>
-                  <option>With options</option>
-                </select>
+            <div class="field">
+              <label class="label" for="name">Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="name">
               </div>
             </div>
-          </div>
 
-          <div class="field">
-            <label class="label">Message</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
+            <div class="field">
+              <label class="label" for="username">Username</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-success" type="text" id="username">
+                <span class="icon is-small is-left">
+                  <span class="fas fa-user"></span>
+                </span>
+                <span class="icon is-small is-right">
+                  <span class="fas fa-check"></span>
+                </span>
+              </div>
+              <p class="help is-success">This username is available</p>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
-                I agree to the <a>terms and conditions</a>
+            <div class="field">
+              <label class="label" for="email">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="email">
+                <span class="icon is-small is-left">
+                  <span class="fas fa-envelope"></span>
+                </span>
+                <span class="icon is-small is-right">
+                  <span class="fas fa-exclamation-triangle"></span>
+                </span>
+              </div>
+              <p class="help is-danger">This email is invalid</p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="visually-hidden">Message Related Fields</legend>
+
+            <div class="field">
+              <label class="label" for="subject">
+                <span class="visually-hidden">Message's:</span>
+                Subject
               </label>
+              <div class="control">
+                <div class="select">
+                  <select id="subject">
+                    <optgroup label="List of subjects">
+                      <option>Select dropdown</option>
+                      <option>With options</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question">
-                Yes
-              </label>
-              <label class="radio">
-                <input type="radio" name="question">
-                No
-              </label>
+            <div class="field">
+              <label class="label" for="message">Message</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Textarea" id="message"></textarea>
+              </div>
             </div>
-          </div>
 
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Submit</button>
+          </fieldset>
+
+          <fieldset>
+            <legend class="visually-hidden">Terms and conditions</legend>
+            <div class="field">
+              <div class="control">
+                <label class="checkbox" for="agree">
+                  <input type="checkbox" id="agree">
+                  I agree to the <a>terms and conditions</a>
+                </label>
+              </div>
             </div>
-            <div class="control">
-              <button class="button is-text">Cancel</button>
+
+            <div class="field">
+              <div class="control">
+                <label class="radio" for="yes">
+                  <input type="radio" name="question" id="yes">
+                  Yes
+                </label>
+                <label class="radio" for="no">
+                  <input type="radio" name="question" id="no">
+                  No
+                </label>
+              </div>
             </div>
-          </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="visually-hidden">Form Actions</legend>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Submit</button>
+              </div>
+              <div class="control">
+                <button class="button is-text">Cancel</button>
+              </div>
+            </div>
+          </fieldset>
         </form>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-label="Summary" id="summary">
       <div class="container">
         <div class="columns is-multiline">
 
@@ -1252,14 +1274,14 @@
             <article class="notification media has-background-white">
               <aside class="media-left">
                 <span class="icon">
-                  <i class="has-text-warning fas fa-columns fa-lg"></i>
+                  <span class="has-text-warning fas fa-columns fa-lg"></span>
                 </span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header class="title is-size-4">Columns</header>
                   <p class="is-size-5 subtitle">
-                    The power of <b>Flexbox</b> in a simple interface
+                    The power of <strong>Flexbox</strong> in a simple interface
                   </p>
                 </div>
               </section>
@@ -1270,14 +1292,14 @@
             <article class="notification has-background-white media">
               <aside class="media-left">
                 <span class="icon has-text-info">
-                  <i class="fab fa-lg fa-wpforms"></i>
+                  <span class="fab fa-lg fa-wpforms"></span>
                 </span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header class="title is-size-4">Form</header>
                   <p class="is-size-5 subtitle">
-                    The indispensable <b>form controls</b>, designed for maximum clarity
+                    The indispensable <strong>form controls</strong>, designed for maximum clarity
                   </p>
                 </div>
               </section>
@@ -1288,7 +1310,7 @@
             <article class="notification has-background-white media">
               <aside class="media-left">
                 <span class="icon has-text-danger">
-                  <i class="fas fa-lg fa-cubes"></i>
+                  <span class="fas fa-lg fa-cubes"></span>
                 </span>
               </aside>
               <section class="media-content">
@@ -1306,14 +1328,14 @@
             <article class="notification has-background-white media">
               <aside class="media-left">
                 <span class="icon has-text-grey">
-                  <i class="fas fa-lg fa-cogs"></i>
+                  <span class="fas fa-lg fa-cogs"></span>
                 </span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header class="title is-size-4">Modifiers</header>
                   <p class="is-size-5 subtitle">
-                    An <b>easy-to-read</b> naming system designed for humans
+                    An <strong>easy-to-read</strong> naming system designed for humans
                   </p>
                 </div>
               </section>
@@ -1324,14 +1346,14 @@
             <article class="notification has-background-white media">
               <aside class="media-left">
                 <span class="icon has-text-primary">
-                  <i class="fas fa-lg fa-warehouse"></i>
+                  <span class="fas fa-lg fa-warehouse"></span>
                 </span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header class="title is-size-4">Layout</header>
                   <p class="is-size-5 subtitle">
-                    Design the <b>structure</b> of your webpage with these CSS classes
+                    Design the <strong>structure</strong> of your webpage with these CSS classes
                   </p>
                 </div>
               </section>
@@ -1342,14 +1364,14 @@
             <article class="notification has-background-white media">
               <aside class="media-left">
                 <span class="icon has-text-danger">
-                  <i class="fas fa-lg fa-cube"></i>
+                  <span class="fas fa-lg fa-cube"></span>
                 </span>
               </aside>
               <section class="media-content">
                 <div class="content">
                   <header class="title is-size-4">Elements</header>
                   <p class="is-size-5 subtitle">
-                    Essential interface elements that only require a <b>single CSS class</b>
+                    Essential interface elements that only require a <strong>single CSS class</strong>
                   </p>
                 </div>
               </section>
@@ -1362,11 +1384,11 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" aria-label="Footer" id="footer">
     <div class="container">
       <div class="columns">
         <article class="column is-3 is-offset-2">
-          <header class="is-3 title"><b>Lessons</b></header>
+          <header class="is-3 title"><strong>Lessons</strong></header>
           <ul>
             <li><a>Lorem ipsum dolor sit amet</a></li>
             <li><a>Vestibulum errato isse</a></li>
@@ -1378,7 +1400,7 @@
           </ul>
         </article>
         <article class="column is-3">
-          <header class="is-3 title"><b>News</b></header>
+          <header class="is-3 title"><strong>News</strong></header>
           <ul>
             <li><a>Labore et dolore magna aliqua</a></li>
             <li><a>Kanban airis sum eschelor</a></li>
@@ -1390,7 +1412,7 @@
           </ul>
         </article>
         <article class="column is-4">
-          <header class="is-3 title"><b>Help</b></header>
+          <header class="is-3 title"><strong>Help</strong></header>
           <ul>
             <li><a>Objects in space</a></li>
             <li><a>Playing cards with coyote</a></li>
@@ -1403,10 +1425,10 @@
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a><i class="fab fa-github-alt fa-2x"></i></a>
-          <a><i class="fab fa-youtube fa-2x"></i></a>
-          <a><i class="fab fa-facebook fa-2x"></i></a>
-          <a><i class="fab fa-twitter fa-2x"></i></a>
+          <a><span class="fab fa-github-alt fa-2x"></span></a>
+          <a><span class="fab fa-youtube fa-2x"></span></a>
+          <a><span class="fab fa-facebook fa-2x"></span></a>
+          <a><span class="fab fa-twitter fa-2x"></span></a>
         </div>
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
       </div>
