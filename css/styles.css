@@ -119,6 +119,8 @@
   height: 3rem;
   line-height: 2.8;
   margin-bottom: 1rem;
+  width: 100%;
+  border: 0;
 }
 .post {
   margin: 1rem;
@@ -158,9 +160,48 @@ fieldset:not(:last-child) {
   margin-bottom: .75rem;
 }
 
+.external-link {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==") 90% center no-repeat;
+  padding-right: 25px;
+}
+
+.modal a,
+.field a,
+.media-content a {
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
     background-color: #888;
   }
+}
+
+
+a:focus,
+a.box:focus,
+.button:focus,
+.button.is-link:focus,
+.button.is-info:focus,
+.hero.is-info .tabs.is-boxed button:focus,
+.navbar-item.has-text-white:focus,
+.navbar-burger:focus
+.button.is-white.is-outlined:focus,
+.input.is-active, 
+.input.is-focused, 
+.input:active, 
+.input:focus,
+input[type=radio]:focus,
+input[type=checkbox]:focus,
+.select select.is-active, 
+.select select.is-focused, 
+.select select:active, 
+.select select:focus, 
+.textarea.is-active, 
+.textarea.is-focused, 
+.textarea:active, 
+.textarea:focus { 
+  box-shadow: none;
+  outline: 2px rgba(235,115,0,.8) solid;
+  border-color: transparent;
 }
