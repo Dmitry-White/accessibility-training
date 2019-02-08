@@ -75,26 +75,31 @@
 
     <section class="hero hero-bg is-fullheight" aria-labelledby="engineering-future" id="engineering">
       <div class="hero-body">
-        <article class="container has-text-centered">
+        <div class="container has-text-centered">
           <div class="column is-6 is-offset-3">
             <h1 class="title has-text-white" id="engineering-future">Engineering the Future</h1>
             <div class="subtitle has-text-white">
               $this is the best software platform for running an internet business. We handle billions of dollars every
               year for forward-thinking businesses around the world.
             </div>
-            <section class="box">
-              <div class="field is-grouped">
-                <p class="control is-expanded">
-                  <label for="notify" class="visually-hidden">Input your email</label>
-                  <input class="input" id="notify">
-                </p>
-                <p class="control">
-                  <a class="button is-info">Notify Me</a>
-                </p>
-              </div>
-            </section>
+
+            <form aria-labelledby="notify-me" class="box">
+              <fieldset>
+                <legend id="notify-me" class="visually-hidden">Notify Me</legend>
+                <div class="field is-grouped">
+                  <p class="control is-expanded">
+                    <label for="notify" class="visually-hidden">Input your email</label>
+                    <input class="input" id="notify">
+                  </p>
+                  <p class="control">
+                    <button class="button is-info" type="submit">Notify Me</button>
+                  </p>
+                </div>
+              </fieldset>
+            </form>
+
           </div>
-        </article>
+        </div>
       </div>
 
       <div class="box cta">
@@ -107,29 +112,31 @@
 
     <section class="section" aria-labelledby="about-us" id="about">
       <div class="section-heading has-text-centered">
-        <header class="title is-2" id="about-us">About Us</header>
+        <h2 class="title is-2" id="about-us">About Us</h2>
         <div class="subtitle is-5">We of all trades, master of "some"</div>
-        <section class="container">
+        <div class="container">
           <p>Web developers with more than <strong>4 years</strong> of well-rounded experience with a degree in the
             field of
-            <strong>Computer Science</strong>, extensive knowledge of modern Web techniques and love for <strong>Coffee</strong>.
+            <strong>Computer Science</strong>, extensive knowledge of modern Web techniques and love for
+            <strong>Coffee</strong>.
             Looking for an opportunity to work and upgrade, as well as being involved in an organization that
             believes
             in gaining a competitive edge and giving back to the community.</p>
-        </section>
+        </div>
       </div>
 
       <div class="columns has-same-height is-gapless">
         <div class="column">
-          <article class="card">
+          <div class="card">
             <div class="card-content">
               <header class="title is-4">Profile</header>
 
-              <section class="content">
+              <div class="content">
                 <table class="table-profile">
+                  <caption class="visually-hidden">Example data</caption>
                   <tr>
-                    <th colspan="1"></th>
-                    <th colspan="2"></th>
+                    <th scope="col" colspan="1"><span class="visually-hidden">Example titles</span></th>
+                    <th scope="col" colspan="2"><span class="visually-hidden">Example values</span></th>
                   </tr>
                   <tr>
                     <td>Address:</td>
@@ -144,31 +151,31 @@
                     <td><a>minion@despicable.me</a></td>
                   </tr>
                 </table>
-              </section>
+              </div>
               <br>
-              <section class="buttons has-addons is-centered">
+              <div class="buttons has-addons is-centered">
                 <a class="button is-link">Github</a>
                 <a class="button is-link">LinkedIn</a>
-              </section>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
 
         <div class="column">
-          <article class="card">
+          <div class="card">
             <div class="card-image">
-              <section class="image">
+              <div class="image">
                 <img src="https://source.unsplash.com/random/300x300/?sig=22" alt="Profile picture" />
-              </section>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
 
         <div class="column">
-          <article class="card">
+          <div class="card">
             <div class="card-content skills-content">
               <header class="title is-4">Skills</header>
-              <section class="content">
+              <div class="content">
                 <div class="media">
                   <div class="media-content">
                     <div class="content">
@@ -228,9 +235,9 @@
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
 
       </div>
@@ -269,64 +276,64 @@
 
     <section class="hero has-background-grey-light" aria-labelledby="key-features" id="features">
       <div class="container features">
-        <header class="section-heading has-text-centered">
-          <div class="title is-2" id="key-features">Three key features</div>
-          <div class="subtitle is-5">We don't hide what we do</div>
-        </header>
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2" id="key-features">Three key features</h2>
+          <h5 class="subtitle is-5">We don't hide what we do</h5>
+        </div>
 
         <div class="columns">
 
-          <article class="column is-4">
+          <div class="column is-4">
             <div class="card is-shady">
-              <aside class="card-image has-text-centered">
+              <div class="card-image has-text-centered">
                 <span class="fa fa-paw"></span>
-              </aside>
-              <section class="card-content">
-                <header>Tristique senectus et netus et.</header>
+              </div>
+              <div class="card-content">
                 <div class="content">
+                  <p>Tristique senectus et netus et.</p>
                   <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer
                     enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper
                     viverra nam.</p>
                   <p><a>Learn more</a></p>
                 </div>
-              </section>
+              </div>
             </div>
-          </article>
+          </div>
 
-          <article class="column is-4">
+          <div class="column is-4">
             <div class="card is-shady">
-              <aside class="card-image has-text-centered">
+              <div class="card-image has-text-centered">
                 <span class="fab fa-empire"></span>
-              </aside>
-              <section class="card-content">
-                <header>Tempor orci dapibus ultrices in.</header>
+              </div>
+              <div class="card-content">
                 <div class="content">
+                  <p>Tempor orci dapibus ultrices in.</p>
                   <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non
                     odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue.
                     Phasellus vestibulum lorem
                     sed risus.</p>
                   <p><a>Learn more</a></p>
                 </div>
-              </section>
+              </div>
             </div>
-          </article>
+          </div>
 
-          <article class="column is-4">
+          <div class="column is-4">
             <div class="card is-shady">
-              <aside class="card-image has-text-centered">
+              <div class="card-image has-text-centered">
                 <span class="fab fa-apple"></span>
-              </aside>
-              <section class="card-content">
-                <header> Leo integer malesuada nunc vel risus. </header>
+              </div>
+              <div class="card-content">
                 <div class="content">
+                  <p> Leo integer malesuada nunc vel risus. </p>
                   <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque
                     dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan
                     lacus vel facilisis.</p>
                   <p><a>Learn more</a></p>
                 </div>
-              </section>
+              </div>
             </div>
-          </article>
+          </div>
 
         </div>
       </div>
@@ -334,10 +341,10 @@
 
     <section class="hero is-info" aria-labelledby="list-topics" id="topics">
       <div class="hero-body">
-        <header class="container">
-          <div class="title" id="list-topics">List of topics</div>
-          <div class="subtitle">We are always in touch we the outside world</div>
-        </header>
+        <div class="container">
+          <h2 class="title" id="list-topics">List of topics</h2>
+          <h5 class="subtitle">We are always in touch we the outside world</h5>
+        </div>
       </div>
       <div class="tabs is-boxed is-centered main-menu" id="nav">
         <ul>
@@ -375,15 +382,15 @@
         <div class="container">
           <div class="columns features">
 
-            <article class="column is-4">
+            <div class="column is-4">
               <div class="card">
-                <header class="card-image">
+                <div class="card-image">
                   <div class="image is-4by3">
                     <img src="https://source.unsplash.com/random/?sig=1" alt="Image Modal picture" class="modal-button"
                       data-target="modal-image1">
                   </div>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="content">
                     <div>Click on image above</div>
                     <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer
@@ -391,18 +398,18 @@
                       viverra nam.</p>
                     <span class="button is-link modal-button" data-target="modal-image1">Image modal</span>
                   </div>
-                </section>
+                </div>
               </div>
-            </article>
+            </div>
 
-            <article class="column is-4">
+            <div class="column is-4">
               <div class="card">
-                <header class="card-image">
+                <div class="card-image">
                   <div class="image is-4by3">
                     <img src="https://source.unsplash.com/random/?sig=2" alt="Modal Card picture">
                   </div>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="content">
                     <div>Tempor orci dapibus ultrices in.</div>
                     <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu
@@ -411,19 +418,19 @@
                       sed risus.</p>
                     <span class="button is-link modal-button" data-target="modal-card">Modal Card</span>
                   </div>
-                </section>
+                </div>
               </div>
-            </article>
+            </div>
 
-            <article class="column is-4 modal-button" data-target="modal-image">
+            <div class="column is-4 modal-button" data-target="modal-image">
               <div class="card">
-                <header class="card-image">
+                <div class="card-image">
                   <div class="image is-4by3">
                     <img src="https://source.unsplash.com/random/?sig=3" alt="Image Modal picture" class="modal-button"
                       data-target="modal-image2">
                   </div>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="content">
                     <div>Click anywhere on card</div>
                     <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque
@@ -431,9 +438,9 @@
                       lacus vel facilisis.</p>
                     <span class="button is-link modal-button" data-target="modal-image2">Image modal</span>
                   </div>
-                </section>
+                </div>
               </div>
-            </article>
+            </div>
 
           </div>
         </div>
@@ -442,68 +449,63 @@
       <div class="tab-pane is-active" id="pane-2">
         <div class="content">
 
-          <article>
-            <header class="is-1 title">Hello World</header>
-            <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus
-              ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper
-              dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as
-              well!
-            </p>
-          </article>
+          <h1 class="is-1 title">Hello World</h1>
+          <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus
+            ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper
+            dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as
+            well!
+          </p>
 
-          <article>
-            <header class="is-2 title">Second level</header>
-            <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit
-              amet
-              commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem
-              rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
-            <ul>
-              <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-              <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-              <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-              <li>Ut non enim metus.</li>
-            </ul>
-          </article>
+          <h2 class="is-2 title">Second level</h2>
+          <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus
+            mi, sit
+            amet
+            commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem
+            rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+          <ul>
+            <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+            <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
+            <li>Ut non enim metus.</li>
+          </ul>
 
-          <article>
-            <header class="is-3 title">Third level</header>
-            <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a>non ante</a>. Phasellus lacus ex, semper ac
-              tortor
-              nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
-            <ol>
-              <li>Donec blandit a lorem id convallis.</li>
-              <li>Cras gravida arcu at diam gravida gravida.</li>
-              <li>Integer in volutpat libero.</li>
-              <li>Donec a diam tellus.</li>
-              <li>Aenean nec tortor orci.</li>
-              <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
-              <li>Vivamus maximus ultricies pulvinar.</li>
-            </ol>
-            <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit
-              est
-              tellus sit amet turpis.</blockquote>
-            <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum.
-              Maecenas
-              ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
-            <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus.
-              Maecenas vestibulum interdum commodo.</p>
-            <dl>
-              <dt>Web</dt>
-              <dd>The part of the Internet that contains websites and web pages</dd>
-              <dt>HTML</dt>
-              <dd>A markup language for creating web pages</dd>
-              <dt>CSS</dt>
-              <dd>A technology to make HTML look better</dd>
-            </dl>
-            <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet,
-              mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-          </article>
 
-          <article>
-            <header class="is-4 title">Fourth level</header>
-            <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus
-              laoreet, at elementum ex efficitur.</p>
-            <pre>
+          <h3 class="is-3 title">Third level</h3>
+          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a>non ante</a>. Phasellus lacus ex, semper ac
+            tortor
+            nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+          <ol>
+            <li>Donec blandit a lorem id convallis.</li>
+            <li>Cras gravida arcu at diam gravida gravida.</li>
+            <li>Integer in volutpat libero.</li>
+            <li>Donec a diam tellus.</li>
+            <li>Aenean nec tortor orci.</li>
+            <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
+            <li>Vivamus maximus ultricies pulvinar.</li>
+          </ol>
+          <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit
+            est
+            tellus sit amet turpis.</blockquote>
+          <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum.
+            Maecenas
+            ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
+          <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus.
+            Maecenas vestibulum interdum commodo.</p>
+          <dl>
+            <dt>Web</dt>
+            <dd>The part of the Internet that contains websites and web pages</dd>
+            <dt>HTML</dt>
+            <dd>A markup language for creating web pages</dd>
+            <dt>CSS</dt>
+            <dd>A technology to make HTML look better</dd>
+          </dl>
+          <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet,
+            mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
+
+          <h4 class="is-4 title">Fourth level</h4>
+          <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus
+            laoreet, at elementum ex efficitur.</p>
+          <pre>
                   &lt;!DOCTYPE html&gt;
                   &lt;html&gt;
                       &lt;head&gt;
@@ -515,66 +517,62 @@
                       &lt;/body&gt;
                   &lt;/html&gt;
                   </pre>
-            <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut
-              vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-            <table>
-              <tr>
-                <th>One</th>
-                <th>Two</th>
-              </tr>
-              <tr>
-                <td>Three</td>
-                <td>Four</td>
-              </tr>
-              <tr>
-                <td>Five</td>
-                <td>Six</td>
-              </tr>
-              <tr>
-                <td>Seven</td>
-                <td>Eight</td>
-              </tr>
-              <tr>
-                <td>Nine</td>
-                <td>Ten</td>
-              </tr>
-              <tr>
-                <td>Eleven</td>
-                <td>Twelve</td>
-              </tr>
-            </table>
-            <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in
-              felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper.
-              Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac
-              posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero
-              accumsan
-              pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel
-              condimentum. Nam pharetra varius metus non pellentesque.</p>
-          </article>
+          <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut
+            vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
+          <table>
+            <caption class="visually-hidden">Example table</caption>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+            </tr>
+            <tr>
+              <td>Three</td>
+              <td>Four</td>
+            </tr>
+            <tr>
+              <td>Five</td>
+              <td>Six</td>
+            </tr>
+            <tr>
+              <td>Seven</td>
+              <td>Eight</td>
+            </tr>
+            <tr>
+              <td>Nine</td>
+              <td>Ten</td>
+            </tr>
+            <tr>
+              <td>Eleven</td>
+              <td>Twelve</td>
+            </tr>
+          </table>
+          <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in
+            felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper.
+            Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac
+            posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero
+            accumsan
+            pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel
+            condimentum. Nam pharetra varius metus non pellentesque.</p>
 
-          <article>
-            <header class="is-5 title">Fifth level</header>
-            <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit.
-              Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a
-              eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
-            <figure>
-              <img src="https://source.unsplash.com/random/256x256/?sig=10" alt="Figure 1, picture 1">
-              <img src="https://source.unsplash.com/random/256x256/?sig=11" alt="Figure 1, picture 2">
-              <img src="https://source.unsplash.com/random/256x256/?sig=12" alt="Figure 1, picture 3">
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
-            </figure>
-          </article>
+          <h5 class="is-5 title">Fifth level</h5>
+          <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit.
+            Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a
+            eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
+          <figure>
+            <img src="https://source.unsplash.com/random/256x256/?sig=10" alt="Figure 1, picture 1">
+            <img src="https://source.unsplash.com/random/256x256/?sig=11" alt="Figure 1, picture 2">
+            <img src="https://source.unsplash.com/random/256x256/?sig=12" alt="Figure 1, picture 3">
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </figure>
 
-          <article>
-            <header class="is-6 title">Sixth level</header>
-            <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut
-              eleifend
-              eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim
-              vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit
-              vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
-          </article>
+          <h6 class="is-6 title">Sixth level</h6>
+          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut
+            eleifend
+            eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim
+            vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit
+            vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
 
         </div>
       </div>
@@ -582,74 +580,66 @@
       <div class="tab-pane" id="pane-3">
         <div class="columns medias">
           <div class="column">
-            <article class="media">
-              <aside class="media-left">
+            <div class="media">
+              <div class="media-left">
                 <span class="fab fa-github-square fa-4x"></span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header>
+                  <p>
                     <a><strong>Dominic Ipsum</strong></a>
-                  </header>
-                  <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
                     fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
 
-            <article class="media">
-              <aside class="media-left">
+            <div class="media">
+              <div class="media-left">
                 <span class="fab fa-empire fa-4x"></span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header>
-                    <a><strong>Cassie Ipsum</strong></a>
-                  </header>
                   <p>
+                    <a><strong>Cassie Ipsum</strong></a>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
                     fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
           <div class="column">
-            <article class="media">
-              <aside class="media-left">
+            <div class="media">
+              <div class="media-left">
                 <span class="fab fa-ravelry fa-4x"></span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header>
+                  <p>
                     <a><strong>Avery Ipsum</strong></a>
-                  </header>
-                  <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
                     fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
 
-            <article class="media">
-              <aside class="media-left">
+            <div class="media">
+              <div class="media-left">
                 <span class="fab fa-github-alt fa-4x"></span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header>
-                    <a><strong>io Ipsum</strong></a>
-                  </header>
                   <p>
+                    <a><strong>io Ipsum</strong></a>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
                     fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -657,13 +647,13 @@
       <div class="tab-pane" id="pane-4">
         <div class="columns is-centered">
           <div class="column is-three-quarters">
-            <article>
-              <header class="title has-text-centered">Inspired video</header>
-              <section class="embed-container image">
+            <div>
+              <h3 class="title has-text-centered">Inspired video</h3>
+              <div class="embed-container image">
                 <iframe src="https://player.vimeo.com/video/261794608" webkitAllowFullScreen mozallowfullscreen
                   allowFullScreen></iframe>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -672,99 +662,99 @@
 
     <section class="section has-background-grey-lighter" aria-labelledby="our-tours" id="tours">
       <div class="container has-text-centered">
-        <header class="section-heading has-text-centered">
-          <div class="title is-2" id="our-tours">Tours</div>
-          <div class="subtitle is-5">Outcoming dates for the best options</div>
-        </header>
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2" id="our-tours">Tours</h2>
+          <h5 class="subtitle is-5">Outcoming dates for the best options</h5>
+        </div>
 
         <div class="tile is-ancestor">
 
-          <article class="tile is-parent">
+          <div class="tile is-parent">
             <div class="tile is-child box">
-              <aside class="image">
+              <div class="image">
                 <img src="https://source.unsplash.com/random/256x170/?sig=100" alt="New York Tour picture">
-              </aside>
-              <header class="title">New York</header>
+              </div>
+              <h3 class="title">New York</h3>
               <p class="subtitle">Fri 27 Nov 2016</p>
               <a class="button">Buy Tickets</a>
             </div>
-          </article>
+          </div>
 
-          <article class="tile is-parent">
+          <div class="tile is-parent">
             <div class="tile is-child box">
-              <aside class="image">
+              <div class="image">
                 <img src="https://source.unsplash.com/random/256x170/?sig=101" alt="Los Angeles Tour picture">
-              </aside>
-              <header class="title">Los Angeles</header>
+              </div>
+              <h3 class="title">Los Angeles</h3>
               <p class="subtitle">Fri 27 Nov 2016</p>
               <a class="button">Buy Tickets</a>
             </div>
-          </article>
+          </div>
 
-          <article class="tile is-parent">
+          <div class="tile is-parent">
             <div class="tile is-child box">
-              <aside class="image">
+              <div class="image">
                 <img src="https://source.unsplash.com/random/256x170/?sig=102" alt="Mexico Tour picture">
-              </aside>
-              <header class="title">Mexico</header>
+              </div>
+              <h3 class="title">Mexico</h3>
               <p class="subtitle">Fri 27 Nov 2016</p>
               <a class="button">Buy Tickets</a>
             </div>
-          </article>
+          </div>
 
         </div>
 
         <div class="tile is-ancestor">
 
-          <article class="tile is-parent">
+          <div class="tile is-parent">
             <div class="tile is-child box">
-              <aside class="image">
+              <div class="image">
                 <img src="https://source.unsplash.com/random/256x170/?sig=103" alt="Paris Tour picture">
-              </aside>
-              <header class="title">Paris</header>
+              </div>
+              <h3 class="title">Paris</h3>
               <p class="subtitle">Fri 27 Nov 2016</p>
               <a class="button">Buy Tickets</a>
             </div>
-          </article>
+          </div>
 
-          <article class="tile is-parent">
+          <div class="tile is-parent">
             <div class="tile is-child box">
-              <aside class="image">
+              <div class="image">
                 <img src="https://source.unsplash.com/random/256x170/?sig=104" alt="Tokio Tour picture">
-              </aside>
-              <header class="title">Tokio</header>
+              </div>
+              <h3 class="title">Tokio</h3>
               <p class="subtitle">Fri 27 Nov 2016</p>
               <a class="button">Buy Tickets</a>
             </div>
-          </article>
+          </div>
 
-          <article class="tile is-parent">
+          <div class="tile is-parent">
             <div class="tile is-child box">
-              <aside class="image">
+              <div class="image">
                 <img src="https://source.unsplash.com/random/256x170/?sig=105" alt="London Tour picture">
-              </aside>
-              <header class="title">London</header>
+              </div>
+              <h3 class="title">London</h3>
               <p class="subtitle">Fri 27 Nov 2016</p>
               <a class="button">Buy Tickets</a>
             </div>
-          </article>
+          </div>
 
         </div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="our-services" id="services">
-      <header class="section-heading has-text-centered">
-        <div class="title is-2" id="our-services">Services</div>
-        <div class="subtitle is-5">What can I do for you?</div>
-      </header>
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-2" id="our-services">Services</h2>
+        <h5 class="subtitle is-5">What can I do for you?</h5>
+      </div>
 
       <div class="container">
         <div class="columns">
           <div class="column">
             <a class="box">
               <div class="content">
-                <div class="title is-5">Front End Web Development</div>
+                <h5 class="title is-5">Front End Web Development</h5>
                 Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
                 Vue.js.
               </div>
@@ -774,7 +764,7 @@
           <div class="column">
             <a class="box">
               <div class="content">
-                <div class="title is-5">Back End Web Development</div>
+                <h5 class="title is-5">Back End Web Development</h5>
                 Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
               </div>
             </a>
@@ -785,7 +775,7 @@
           <div class="column">
             <a class="box">
               <div class="content">
-                <div class="title is-5">Front End Web Development</div>
+                <h5 class="title is-5">Front End Web Development</h5>
                 Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
                 Vue.js.
               </div>
@@ -795,7 +785,7 @@
           <div class="column">
             <a class="box">
               <div class="content">
-                <div class="title is-5">Back End Web Development</div>
+                <h5 class="title is-5">Back End Web Development</h5>
                 Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
               </div>
             </a>
@@ -806,16 +796,16 @@
 
     <section class="section has-background-grey-lighter" aria-labelledby="our-portfolio" id="portfolio">
       <div class="container">
-        <header class="section-heading has-text-centered">
-          <div class="title is-2" id="our-portfolio">Portfolio</div>
-          <div class="subtitle is-5">Our latest works</div>
-        </header>
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2" id="our-portfolio">Portfolio</h2>
+          <h5 class="subtitle is-5">Our latest works</h5>
+        </div>
 
-        <section class="container portfolio-container">
+        <div class="container portfolio-container">
           <div class="columns">
             <div class="column is-4">
-              <article class="card">
-                <header class="card-header">
+              <div class="card">
+                <div class="card-header">
                   <p class="card-header-title">
                     <span>Admin (Light)</span>
                     <span class="is-pulled-right">
@@ -826,22 +816,22 @@
                       <span class="tag is-danger">WIP</span>
                     </span>
                   </p>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="image">
                     <img src="https://source.unsplash.com/random/300x200/?sig=201" alt="Admin Project picture">
                   </div>
-                </section>
-                <footer class="card-footer">
+                </div>
+                <div class="card-footer">
                   <a class="card-footer-item">Preview</a>
                   <a class="card-footer-item">Source Code</a>
-                </footer>
-              </article>
+                </div>
+              </div>
             </div>
 
             <div class="column is-4">
-              <article class="card">
-                <header class="card-header">
+              <div class="card">
+                <div class="card-header">
                   <p class="card-header-title">
                     <span>Cards</span>
                     <span class="is-pulled-right">
@@ -852,22 +842,22 @@
                       <span class="tag is-default">?</span>
                     </span>
                   </p>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="image">
                     <img src="https://source.unsplash.com/random/300x200/?sig=202" alt="Cards Project picture">
                   </div>
-                </section>
-                <footer class="card-footer">
+                </div>
+                <div class="card-footer">
                   <a class="card-footer-item">Preview</a>
                   <a class="card-footer-item">Source Code</a>
-                </footer>
-              </article>
+                </div>
+              </div>
             </div>
 
             <div class="column is-4">
-              <article class="card">
-                <header class="card-header">
+              <div class="card">
+                <div class="card-header">
                   <p class="card-header-title">
                     <span>Forum</span>
                     <span class="is-pulled-right">
@@ -878,25 +868,25 @@
                       <span class="tag is-default">Mobile</span>
                     </span>
                   </p>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="image">
                     <img src="https://source.unsplash.com/random/300x200/?sig=203" alt="Forum Project picture">
                   </div>
-                </section>
-                <footer class="card-footer">
+                </div>
+                <div class="card-footer">
                   <a class="card-footer-item">Preview</a>
                   <a class="card-footer-item">Source Code</a>
-                </footer>
-              </article>
+                </div>
+              </div>
             </div>
 
           </div>
 
           <div class="columns">
             <div class="column is-4">
-              <article class="card">
-                <header class="card-header">
+              <div class="card">
+                <div class="card-header">
                   <p class="card-header-title">
                     <span>InstaAlbum</span>
                     <span class="is-pulled-right">
@@ -907,22 +897,22 @@
                       <span class="tag is-default">Mobile</span>
                     </span>
                   </p>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="image">
                     <img src="https://source.unsplash.com/random/300x200/?sig=204" alt="InstaAlbum Project picture">
                   </div>
-                </section>
-                <footer class="card-footer">
+                </div>
+                <div class="card-footer">
                   <a class="card-footer-item">Preview</a>
                   <a class="card-footer-item">Source Code</a>
-                </footer>
-              </article>
+                </div>
+              </div>
             </div>
 
             <div class="column is-4">
-              <article class="card">
-                <header class="card-header">
+              <div class="card">
+                <div class="card-header">
                   <p class="card-header-title">
                     <span>Landing</span>
                     <span class="is-pulled-right">
@@ -933,22 +923,22 @@
                       <span class="tag is-default">Mobile</span>
                     </span>
                   </p>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="image">
                     <img src="https://source.unsplash.com/random/300x200/?sig=205" alt="Landing Project picture">
                   </div>
-                </section>
-                <footer class="card-footer">
+                </div>
+                <div class="card-footer">
                   <a class="card-footer-item">Preview</a>
                   <a class="card-footer-item">Source Code</a>
-                </footer>
-              </article>
+                </div>
+              </div>
             </div>
 
             <div class="column is-4">
-              <article class="card">
-                <header class="card-header">
+              <div class="card">
+                <div class="card-header">
                   <p class="card-header-title">
                     <span>Marketing</span>
                     <span class="is-pulled-right">
@@ -959,31 +949,31 @@
                       <span class="tag is-default">Mobile</span>
                     </span>
                   </p>
-                </header>
-                <section class="card-content">
+                </div>
+                <div class="card-content">
                   <div class="image">
                     <img src="https://source.unsplash.com/random/300x200/?sig=206" alt="Marketing Project picture">
                   </div>
-                </section>
-                <footer class="card-footer">
+                </div>
+                <div class="card-footer">
                   <a class="card-footer-item">Preview</a>
                   <a class="card-footer-item">Source Code</a>
-                </footer>
-              </article>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="our-forum" id="forum">
       <div class="container">
-        <header class="section-heading has-text-centered">
-          <div class="title is-2" id="our-forum">Forum</div>
-          <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
-        </header>
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2" id="our-forum">Forum</h2>
+          <h5 class="subtitle is-5">Discuss any topic with no leaving this page</h5>
+        </div>
 
-        <section class="columns">
+        <div class="columns">
           <div class="column is-3">
             <a class="button is-primary is-block is-alt is-large">New Post</a>
             <div class="menu">
@@ -1000,163 +990,154 @@
           </div>
           <div class="column is-9">
             <div class="box content">
-              <article class="post">
-                <header>
-                  <h4>How do you center a button in a box?</h4>
-                </header>
-                <section class="media">
-                  <aside class="media-left">
+              <div class="post">
+                <h4>How do you center a button in a box?</h4>
+                <div class="media">
+                  <div class="media-left">
                     <p class="image is-32x32">
                       <img src="https://source.unsplash.com/random/64x64/?sig=300" alt="@jsmith avatar picture">
                     </p>
-                  </aside>
-                  <section class="media-content">
+                  </div>
+                  <div class="media-content">
                     <div class="content">
                       <p>
                         <a>@jsmith</a> replied 34 minutes ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
-                  </section>
-                  <aside class="media-right">
+                  </div>
+                  <div class="media-right">
                     <span class="has-text-grey-light"><span class="fa fa-comments"></span> 1</span>
-                  </aside>
-                </section>
-              </article>
+                  </div>
+                </div>
+              </div>
 
-              <article class="post">
-                <header>
-                  <h4>How can I make a button go full width?</h4>
-                </header>
-                <section class="media">
-                  <aside class="media-left">
+              <div class="post">
+                <h4>How can I make a button go full width?</h4>
+                <div class="media">
+                  <div class="media-left">
                     <p class="image is-32x32">
                       <img src="https://source.unsplash.com/random/64x64/?sig=301" alt="@red avatar picture">
                     </p>
-                  </aside>
-                  <section class="media-content">
+                  </div>
+                  <div class="media-content">
                     <div class="content">
                       <p>
                         <a>@red</a> replied 40 minutes ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
-                  </section>
-                  <aside class="media-right">
+                  </div>
+                  <div class="media-right">
                     <span class="has-text-grey-light"><span class="fa fa-comments"></span> 0</span>
-                  </aside>
-                </section>
-              </article>
+                  </div>
+                </div>
+              </div>
 
-              <article class="post">
-                <header>
-                  <h4>TypeError: Data must be a string or a buffer when trying touse tabs</h4>
-                </header>
-                <section class="media">
-                  <aside class="media-left">
+              <div class="post">
+                <h4>TypeError: Data must be a string or a buffer when trying touse tabs</h4>
+                <div class="media">
+                  <div class="media-left">
                     <p class="image is-32x32">
                       <img src="https://source.unsplash.com/random/64x64/?sig=302" alt="@jsmith avatar picture">
                     </p>
-                  </aside>
-                  <section class="media-content">
+                  </div>
+                  <div class="media-content">
                     <div class="content">
                       <p>
                         <a>@jsmith</a> replied 53 minutes ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
-                  </section>
-                  <aside class="media-right">
+                  </div>
+                  <div class="media-right">
                     <span class="has-text-grey-light"><span class="fa fa-comments"></span> 13</span>
-                  </aside>
-                </section>
-              </article>
+                  </div>
+                </div>
+              </div>
 
-              <article class="post">
-                <header>
-                  <h4>How to vertically center elements?</h4>
-                </header>
-                <section class="media">
-                  <aside class="media-left">
+              <div class="post">
+                <h4>How to vertically center elements?</h4>
+                <div class="media">
+                  <div class="media-left">
                     <p class="image is-32x32">
                       <img src="https://source.unsplash.com/random/64x64/?sig=303" alt="@brown avatar picture">
                     </p>
-                  </aside>
-                  <section class="media-content">
+                  </div>
+                  <div class="media-content">
                     <div class="content">
                       <p>
                         <a>@brown</a> replied 3 hours ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
-                  </section>
-                  <aside class="media-right">
+                  </div>
+                  <div class="media-right">
                     <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
-                  </aside>
-                </section>
-              </article>
+                  </div>
+                </div>
+              </div>
 
-              <article class="post">
-                <header>
-                  <h4>I'm trying to use hamburger menu on css, but it doesn't work. What is wrong?</h4>
-                </header>
-                <section class="media">
-                  <aside class="media-left">
+              <div class="post">
+                <h4>I'm trying to use hamburger menu on css, but it doesn't work. What is wrong?</h4>
+                <div class="media">
+                  <div class="media-left">
                     <p class="image is-32x32">
                       <img src="https://source.unsplash.com/random/64x64/?sig=304" alt="@hamburgler avatar picture">
                     </p>
-                  </aside>
-                  <section class="media-content">
+                  </div>
+                  <div class="media-content">
                     <div class="content">
                       <p>
                         <a>@hamburgler</a> replied 5 hours ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
-                  </section>
-                  <aside class="media-right">
+                  </div>
+                  <div class="media-right">
                     <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
-                  </aside>
-                </section>
-              </article>
+                  </div>
+                </div>
+              </div>
 
-              <article class="post">
-                <header>
-                  <h4>How to make tiles wrap with CSS?</h4>
-                </header>
-                <section class="media">
-                  <aside class="media-left">
+              <div class="post">
+                <h4>How to make tiles wrap with CSS?</h4>
+                <div class="media">
+                  <div class="media-left">
                     <p class="image is-32x32">
                       <img src="https://source.unsplash.com/random/64x64/?sig=305" alt="@rapper avatar picture">
                     </p>
-                  </aside>
-                  <section class="media-content">
+                  </div>
+                  <div class="media-content">
                     <div class="content">
                       <p>
                         <a>@rapper</a> replied 3 hours ago &nbsp;
                         <span class="tag">Question</span>
                       </p>
                     </div>
-                  </section>
-                  <aside class="media-right">
+                  </div>
+                  <div class="media-right">
                     <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
-                  </aside>
-                </section>
-              </article>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </section>
 
     <section class="section has-background-light" aria-labelledby="contact-us" id="contact">
       <div class="container">
-        <header class="section-heading has-text-centered">
-          <div class="title is-2" id="contact-us">Contact us</div>
-          <div class="subtitle is-5">Don't hesitate, ask anything</div>
-        </header>
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2" id="contact-us">Contact us</h2>
+          <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
+        </div>
 
-        <form class="column is-half is-offset-one-quarter box">
+        <form aria-labelledby="contact-form" class="column is-half is-offset-one-quarter box">
+          <fieldset class="visually-hidden">
+            <legend id="contact-form">Contact Form</legend>
+          </fieldset>
 
           <fieldset>
             <legend class="visually-hidden">User Related Fields</legend>
@@ -1271,111 +1252,111 @@
         <div class="columns is-multiline">
 
           <div class="column is-one-third">
-            <article class="notification media has-background-white">
-              <aside class="media-left">
+            <div class="notification media has-background-white">
+              <div class="media-left">
                 <span class="icon">
                   <span class="has-text-warning fas fa-columns fa-lg"></span>
                 </span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header class="title is-size-4">Columns</header>
+                  <h4 class="title is-size-4">Columns</h4>
                   <p class="is-size-5 subtitle">
                     The power of <strong>Flexbox</strong> in a simple interface
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
 
           <div class="column is-one-third">
-            <article class="notification has-background-white media">
-              <aside class="media-left">
+            <div class="notification has-background-white media">
+              <div class="media-left">
                 <span class="icon has-text-info">
                   <span class="fab fa-lg fa-wpforms"></span>
                 </span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header class="title is-size-4">Form</header>
+                  <h4 class="title is-size-4">Form</h4>
                   <p class="is-size-5 subtitle">
                     The indispensable <strong>form controls</strong>, designed for maximum clarity
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
 
           <div class="column is-one-third">
-            <article class="notification has-background-white media">
-              <aside class="media-left">
+            <div class="notification has-background-white media">
+              <div class="media-left">
                 <span class="icon has-text-danger">
                   <span class="fas fa-lg fa-cubes"></span>
                 </span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header class="title is-size-4">Components</header>
+                  <h4 class="title is-size-4">Components</h4>
                   <p class="is-size-5 subtitle">
                     Advanced multi-part components with lots of possibilities
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
 
           <div class="column is-one-third">
-            <article class="notification has-background-white media">
-              <aside class="media-left">
+            <div class="notification has-background-white media">
+              <div class="media-left">
                 <span class="icon has-text-grey">
                   <span class="fas fa-lg fa-cogs"></span>
                 </span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header class="title is-size-4">Modifiers</header>
+                  <h4 class="title is-size-4">Modifiers</h4>
                   <p class="is-size-5 subtitle">
                     An <strong>easy-to-read</strong> naming system designed for humans
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
 
           <div class="column is-one-third">
-            <article class="notification has-background-white media">
-              <aside class="media-left">
+            <div class="notification has-background-white media">
+              <div class="media-left">
                 <span class="icon has-text-primary">
                   <span class="fas fa-lg fa-warehouse"></span>
                 </span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header class="title is-size-4">Layout</header>
+                  <h4 class="title is-size-4">Layout</h4>
                   <p class="is-size-5 subtitle">
                     Design the <strong>structure</strong> of your webpage with these CSS classes
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
 
           <div class="column is-one-third">
-            <article class="notification has-background-white media">
-              <aside class="media-left">
+            <div class="notification has-background-white media">
+              <div class="media-left">
                 <span class="icon has-text-danger">
                   <span class="fas fa-lg fa-cube"></span>
                 </span>
-              </aside>
-              <section class="media-content">
+              </div>
+              <div class="media-content">
                 <div class="content">
-                  <header class="title is-size-4">Elements</header>
+                  <h4 class="title is-size-4">Elements</h4>
                   <p class="is-size-5 subtitle">
                     Essential interface elements that only require a <strong>single CSS class</strong>
                   </p>
                 </div>
-              </section>
-            </article>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -1387,8 +1368,8 @@
   <footer class="footer" aria-label="Footer" id="footer">
     <div class="container">
       <div class="columns">
-        <article class="column is-3 is-offset-2">
-          <header class="is-3 title"><strong>Lessons</strong></header>
+        <div class="column is-3 is-offset-2">
+          <h3 class="is-3 title"><strong>Lessons</strong></h3>
           <ul>
             <li><a>Lorem ipsum dolor sit amet</a></li>
             <li><a>Vestibulum errato isse</a></li>
@@ -1398,9 +1379,9 @@
             <li><a>Flimsy Lavenrock</a></li>
             <li><a>Maven Mousie Lavender</a></li>
           </ul>
-        </article>
-        <article class="column is-3">
-          <header class="is-3 title"><strong>News</strong></header>
+        </div>
+        <div class="column is-3">
+          <h3 class="is-3 title"><strong>News</strong></h3>
           <ul>
             <li><a>Labore et dolore magna aliqua</a></li>
             <li><a>Kanban airis sum eschelor</a></li>
@@ -1410,9 +1391,9 @@
             <li><a>Course Correction</a></li>
             <li><a>Better Angels</a></li>
           </ul>
-        </article>
-        <article class="column is-4">
-          <header class="is-3 title"><strong>Help</strong></header>
+        </div>
+        <div class="column is-4">
+          <h3 class="is-3 title"><strong>Help</strong></h3>
           <ul>
             <li><a>Objects in space</a></li>
             <li><a>Playing cards with coyote</a></li>
@@ -1420,7 +1401,7 @@
             <li><a>The Garden of Forking Paths</a></li>
             <li><a>Future Shock</a></li>
           </ul>
-        </article>
+        </div>
       </div>
 
       <div class="content has-text-centered">
@@ -1435,28 +1416,28 @@
     </div>
   </footer>
 
-  <section id="modal-card" class="modal modal-fx-3dSlit">
+  <div id="modal-card" class="modal modal-fx-3dSlit" aria-hidden="true">
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
-      <article class="card">
-        <aside class="card-image">
+      <div class="card">
+        <div class="card-image">
           <div class="image is-4by3">
             <img src="https://source.unsplash.com/random/?sig=2" alt="Modal Picture Background">
           </div>
-        </aside>
-        <section class="card-content">
-          <article class="media">
-            <aside class="media-left">
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
               <div class="image is-48x48">
                 <img src="http://www.radfaces.com/images/avatars/linda-barret.jpg" alt="Modal Avatar Picture">
               </div>
-            </aside>
-            <header class="media-content">
-              <div class="title is-4">Jane Doe</div>
-              <div class="subtitle is-6">@jane_doe</div>
-            </header>
-          </article>
-          <section class="content">
+            </div>
+            <div class="media-content">
+              <h4 class="title is-4">Jane Doe</h4>
+              <h6 class="subtitle is-6">@jane_doe</h6>
+            </div>
+          </div>
+          <div class="content">
             Laum Ipsum junkah potatoes bookin' it. Moosetown rig up I'm tellin' you way up north bookin' it can't get
             theyah from heeyah native bean suppah whawf Powrtland Museum of Aht, back woods hawsun around the pit mummah
             Yessah, mummah muckle riyht on'ta her
@@ -1473,28 +1454,28 @@
             <a>#responsive</a>
             <br>
             <time datetime="2018-02-02">12:45 AM - 20 June 2018</time>
-          </section>
-        </section>
-      </article>
+          </div>
+        </div>
+      </div>
     </div>
     <button class="modal-close is-large"></button>
-  </section>
+  </div>
 
-  <section id="modal-image1" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" class="modal modal-fx-3dSlit" aria-hidden="true">
     <div class="modal-background"></div>
-    <aside class="modal-content is-huge is-image">
+    <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1" alt="Modal Picture 1">
-    </aside>
+    </div>
     <button class="modal-close is-large"></button>
-  </section>
+  </div>
 
-  <section id="modal-image2" class="modal modal-fx-superScaled">
+  <div id="modal-image2" class="modal modal-fx-superScaled" aria-hidden="true">
     <div class="modal-background"></div>
-    <aside class="modal-content  is-image">
+    <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3" alt="Modal Picture 2">
-    </aside>
+    </div>
     <button class="modal-close is-large"></button>
-  </section>
+  </div>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
