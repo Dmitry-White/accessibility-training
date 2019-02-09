@@ -151,7 +151,6 @@ a {
   color: #001F3F !important;
 }
 
-
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
@@ -201,12 +200,40 @@ fieldset:not(:last-child) {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1087px) {
-  .navbar-menu {
-    background-color: #888;
-  }
+.breadcrumbs {
+  padding-left: 7em;
+  position: absolute;
+  top: 60px;
+  color: white;
 }
 
+.breadcrumbs li {
+  display: inline-block;
+  padding: 0 .25em;
+}
+
+.breadcrumbs li::after {
+  content: '>';
+  margin-left: .5em;
+}
+.breadcrumbs li:last-child::after {
+  content: '';
+}
+
+.breadcrumbs a {
+  color: white;
+  text-decoration: underline;
+}
+
+.breadcrumbs a:hover {
+  color: #ccc;
+}
+
+.breadcrumbs a[aria-current="page"] {
+  cursor: default;
+  color: #ccc;
+  text-decoration: none;
+}
 
 a:focus,
 a.box:focus,
@@ -231,7 +258,75 @@ input[type=checkbox]:focus,
 .textarea.is-focused, 
 .textarea:active, 
 .textarea:focus { 
-  box-shadow: none;
   outline: 2px #B10DC9 solid;
+  box-shadow: none;
   border-color: transparent;
+}
+
+.navbar-burger {
+  border:none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.navbar-burger span,
+.navbar-burger .burger {
+  background-color: #fff;
+}
+
+
+.skipnav {
+  position: relative;
+  z-index: 1000;
+}
+
+.skipnav-button {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  border-radius: 6px;
+  margin-left: 10px;
+  text-align: left;
+  overflow: hidden;
+}
+
+button.skipnav-button:active, 
+button.skipnav-button:focus, 
+button.skipnav-button:hover {
+  left: 0; 
+  top: 0;
+  width: auto; 
+  height: auto; 
+  overflow: visible;
+}
+
+.skipnav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 50px 0 0 10px;
+  background: #fff;
+  width: 150px;
+  padding: 1em;
+  border-radius: 6px;
+  display: none;
+}
+
+.skip-title {
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  margin-bottom: 3px;
+  padding-bottom: 3px;
+}
+
+.is-active > .skipnav-dropdown {
+  display: block;
+}
+
+@media screen and (max-width: 1087px) {
+  .navbar-menu {
+    background-color: #888;
+  }
 }

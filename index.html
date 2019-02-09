@@ -11,6 +11,30 @@
 </head>
 
 <body>
+  <div class="skipnav" aria-hidden="true">
+    <button class="button is-info skipnav-button">Skip Navigation To...</button>
+    <ul class="skipnav-dropdown">
+      <li class="skip-title">Skip To</li>
+      <li><a href="#main-content" class="skip-link">Header</a></li>
+      <li><a href="#main-content" class="skip-link">Main Content</a></li>
+      <li><a href="#footer" class="skip-link">Footer</a></li>
+      <li class="skip-title">Page Outline</li>
+      <li><a href="#engineering" class="skip-link">Engineering the Future</a></li>
+      <li><a href="#about" class="skip-link">About Us</a></li>
+      <li><a href="#numbers" class="skip-link">Numbers</a></li>
+      <li><a href="#features" class="skip-link">Key Features</a></li>
+      <li><a href="#topics" class="skip-link">Topics</a></li>
+      <li><a href="#tabs" class="skip-link">Topic Tabs</a></li>
+      <li><a href="#tours" class="skip-link">Tours</a></li>
+      <li><a href="#services" class="skip-link">Services</a></li>
+      <li><a href="#portfolio" class="skip-link">Portfolio</a></li>
+      <li><a href="#forum" class="skip-link">Forum</a></li>
+      <li><a href="#contact" class="skip-link">Contact Us</a></li>
+      <li><a href="#summary" class="skip-link">Summary</a></li>
+    </ul>
+
+  </div>
+
   <header class="header hero" aria-label="Header" id="header">
     <div class="hero-head">
       <div class="navbar">
@@ -21,14 +45,14 @@
               <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt="EPAM logo"
                 style="width: 100%;">
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
+            <button href="#" class="navbar-burger burger" data-target="navbar-menu">
               <span></span>
               <span></span>
               <span></span>
-            </span>
+            </button>
           </div>
 
-          <nav id="navbarMenu" class="navbar-menu">
+          <nav class="navbar-menu" aria-label="Menu" id="navbar-menu">
             <div class="navbar-end">
               <span class="navbar-item">
                 <a href="#" class="button is-white is-outlined">
@@ -63,6 +87,14 @@
                 </a>
               </span>
             </div>
+          </nav>
+
+          <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Our Work</a></li>
+              <li><a aria-current="page">Engineering the future</a></li>
+            </ol>
           </nav>
 
         </div>
@@ -450,7 +482,8 @@
         <div class="content">
 
           <h1 class="is-1 title">Hello World</h1>
-          <p>Lorem ipsum<sup><a href="#">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus
+          <p>Lorem ipsum<sup><a href="#">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan,
+            metus
             ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper
             dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as
             well!
@@ -471,7 +504,8 @@
 
 
           <h3 class="is-3 title">Third level</h3>
-          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#" class="external-link" target="_blank">non ante</a>. Phasellus lacus ex, semper ac
+          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#" class="external-link" target="_blank">non
+              ante</a>. Phasellus lacus ex, semper ac
             tortor
             nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
           <ol>
@@ -1411,7 +1445,8 @@
           <a href="#"><span class="fab fa-facebook fa-2x"></span></a>
           <a href="#"><span class="fab fa-twitter fa-2x"></span></a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" class="external-link" target="_blank">MIT</a>.</p>
+        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" class="external-link"
+            target="_blank">MIT</a>.</p>
       </div>
     </div>
   </footer>
