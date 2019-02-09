@@ -113,7 +113,7 @@
 }
 
 .button.is-primary.is-alt {
-  background: linear-gradient(to bottom, #0072ff, #00c6ff);
+  background: linear-gradient(to bottom, #2a16ee, #00c6ff);
   font-weight: 700;
   font-size: 14px;
   height: 3rem;
@@ -122,6 +122,36 @@
   width: 100%;
   border: 0;
 }
+.button.is-info,
+.hero.is-info,
+.button.is-link,
+.tag:not(body).is-link {
+  background-color: #2a16ee;
+}
+.help.is-danger,
+.tag:not(body).is-danger {
+  background-color: #85144B;
+  color: #fff;
+}
+
+.tag:not(body).is-primary,
+.tag:not(body).is-success,
+.help.is-success {
+  background-color: #2ECC40;
+  color: #111;
+}
+a {
+  color: #2a16ee;
+}
+.title,
+.subtitle {
+  color: #111;
+}
+.has-text-grey-light {
+  color: #001F3F !important;
+}
+
+
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
@@ -202,6 +232,6 @@ input[type=checkbox]:focus,
 .textarea:active, 
 .textarea:focus { 
   box-shadow: none;
-  outline: 2px rgba(235,115,0,.8) solid;
+  outline: 2px #B10DC9 solid;
   border-color: transparent;
 }
