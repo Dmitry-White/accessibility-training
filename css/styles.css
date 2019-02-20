@@ -1,3 +1,8 @@
+.header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+}
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://unsplash.it/1200/900?random") no-repeat center center fixed;
@@ -108,13 +113,44 @@
 }
 
 .button.is-primary.is-alt {
-  background: linear-gradient(to bottom, #0072ff, #00c6ff);
+  background: linear-gradient(to bottom, #2a16ee, #00c6ff);
   font-weight: 700;
   font-size: 14px;
   height: 3rem;
   line-height: 2.8;
   margin-bottom: 1rem;
+  width: 100%;
+  border: 0;
 }
+.button.is-info,
+.hero.is-info,
+.button.is-link,
+.tag:not(body).is-link {
+  background-color: #2a16ee;
+}
+.help.is-danger,
+.tag:not(body).is-danger {
+  background-color: #85144B;
+  color: #fff;
+}
+
+.tag:not(body).is-primary,
+.tag:not(body).is-success,
+.help.is-success {
+  background-color: #2ECC40;
+  color: #111;
+}
+a {
+  color: #2a16ee;
+}
+.title,
+.subtitle {
+  color: #111;
+}
+.has-text-grey-light {
+  color: #001F3F !important;
+}
+
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
@@ -129,6 +165,165 @@
   margin-bottom: .5rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.visually-hidden:focus {
+  height: auto;
+  width: auto;
+  clip: auto;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset:not(:last-child) {
+  margin-bottom: .75rem;
+}
+
+.external-link {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==") 90% center no-repeat;
+  padding-right: 25px;
+}
+
+.modal a,
+.field a,
+.media-content a {
+  text-decoration: underline;
+}
+
+.breadcrumbs {
+  padding-left: 7em;
+  position: absolute;
+  top: 60px;
+  color: white;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  padding: 0 .25em;
+}
+
+.breadcrumbs li::after {
+  content: '>';
+  margin-left: .5em;
+}
+.breadcrumbs li:last-child::after {
+  content: '';
+}
+
+.breadcrumbs a {
+  color: white;
+  text-decoration: underline;
+}
+
+.breadcrumbs a:hover {
+  color: #ccc;
+}
+
+.breadcrumbs a[aria-current="page"] {
+  cursor: default;
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:focus,
+a.box:focus,
+.button:focus,
+.button.is-link:focus,
+.button.is-info:focus,
+.hero.is-info .tabs.is-boxed button:focus,
+.navbar-item.has-text-white:focus,
+.navbar-burger:focus
+.button.is-white.is-outlined:focus,
+.input.is-active, 
+.input.is-focused, 
+.input:active, 
+.input:focus,
+input[type=radio]:focus,
+input[type=checkbox]:focus,
+.select select.is-active, 
+.select select.is-focused, 
+.select select:active, 
+.select select:focus, 
+.textarea.is-active, 
+.textarea.is-focused, 
+.textarea:active, 
+.textarea:focus { 
+  outline: 2px #B10DC9 solid;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.navbar-burger {
+  border:none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.navbar-burger span,
+.navbar-burger .burger {
+  background-color: #fff;
+}
+
+
+.skipnav {
+  position: relative;
+  z-index: 1000;
+}
+
+.skipnav-button {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  border-radius: 6px;
+  margin-left: 10px;
+  text-align: left;
+  overflow: hidden;
+}
+
+button.skipnav-button:active, 
+button.skipnav-button:focus, 
+button.skipnav-button:hover {
+  left: 0; 
+  top: 0;
+  width: auto; 
+  height: auto; 
+  overflow: visible;
+}
+
+.skipnav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 50px 0 0 10px;
+  background: #fff;
+  width: 150px;
+  padding: 1em;
+  border-radius: 6px;
+  display: none;
+}
+
+.skip-title {
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  margin-bottom: 3px;
+  padding-bottom: 3px;
+}
+
+.is-active > .skipnav-dropdown {
+  display: block;
+}
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
