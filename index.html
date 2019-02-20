@@ -379,32 +379,24 @@
         </div>
       </div>
       <div class="tabs is-boxed is-centered main-menu" id="nav">
-        <ul role="tablist">
-          <li data-target="pane-1" id="tab-1" role="tab" aria-selected="false">
-            <button>
-              <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span></span>
-              <span>Pictures</span>
-            </button>
-          </li>
-          <li data-target="pane-2" id="tab-2" class="is-active" role="tab" aria-selected="true">
-            <button>
-              <span class="icon is-small"><span class="fab fa-empire" aria-hidden="true"></span></span>
-              <span>Article</span>
-            </button>
-          </li>
-          <li data-target="pane-3" id="tab-3" role="tab" aria-selected="false">
-            <button>
-              <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true"></span></span>
-              <span>Team</span>
-            </button>
-          </li>
-          <li data-target="pane-4" id="tab-4" role="tab" aria-selected="false">
-            <button>
-              <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span></span>
-              <span>Video</span>
-            </button>
-          </li>
-        </ul>
+        <div role="tablist" aria-labelledby="topics" class="tab-list">
+          <button data-target="pane-1" id="tab1" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
+            <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span> </span>
+            <span>Pictures</span>
+          </button>
+          <button data-target="pane-2" id="tab2" class="is-active tab-button" role="tab" aria-selected="true">
+            <span class="icon is-small"><span class="fab fa-empire" aria-hidden="true"></span> </span>
+            <span>Article</span>
+          </button>
+          <button data-target="pane-3" id="tab3" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
+            <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true" ></span> </span>
+            <span>Team</span>
+          </button>
+          <button data-target="pane-4" id="tab4" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
+            <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span> </span>
+            <span>Video</span>
+          </button>
+        </div>
       </div>
     </section>
 

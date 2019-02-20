@@ -325,6 +325,21 @@ button.skipnav-button:hover {
   display: block;
 }
 
+.tab-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.hero.is-info .tabs.is-boxed .tab-button.is-active,
+.hero.is-info .tabs.is-boxed .tab-button.is-active:hover {
+  background: white;
+  border-color: white;
+  color: #0a478e;
+  opacity: 1;
+}
+
 @media screen and (max-width: 1087px) {
   .navbar-menu {
     background-color: #888;
