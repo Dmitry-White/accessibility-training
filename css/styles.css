@@ -345,3 +345,42 @@ button.skipnav-button:hover {
     background-color: #888;
   }
 }
+
+
+/* Form validation */
+
+.req-msg {
+  font-size: 14px; 
+  margin-bottom: 1em;
+}
+
+.req-msg span {
+  font-weight: bold;
+  color:#85144B;
+}
+
+input.is-validationmsg {
+  border-color: #2a16ee;
+}
+
+p.is-validationmsg {
+  color: #2a16ee;
+}
+
+.required label:after {
+  background: url(../star.png) no-repeat top right;
+  padding-right: 12px;
+  content: "";
+}
+
+.errors-alert {
+  width: 50%;
+  margin: 30px auto;
+  padding: 5px 20px;
+  color:#85144B;
+}
+
+.errors-alert .title,
+.errors-alert a {
+   color:#85144B;
+}

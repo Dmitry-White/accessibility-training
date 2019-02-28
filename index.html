@@ -17,6 +17,7 @@
       <li class="skip-title">Skip To</li>
       <li><a href="#main-content" class="skip-link">Header</a></li>
       <li><a href="#main-content" class="skip-link">Main Content</a></li>
+      <li><a href="#register-form" class="skip-link">Registration Form</a></li>
       <li><a href="#footer" class="skip-link">Footer</a></li>
       <li class="skip-title">Page Outline</li>
       <li><a href="#engineering" class="skip-link">Engineering the Future</a></li>
@@ -29,7 +30,7 @@
       <li><a href="#services" class="skip-link">Services</a></li>
       <li><a href="#portfolio" class="skip-link">Portfolio</a></li>
       <li><a href="#forum" class="skip-link">Forum</a></li>
-      <li><a href="#contact" class="skip-link">Contact Us</a></li>
+      <li><a href="#register-form" class="skip-link">Registration Form</a></li>
       <li><a href="#summary" class="skip-link">Summary</a></li>
     </ul>
 
@@ -1153,122 +1154,94 @@
       </div>
     </section>
 
-    <section class="section has-background-light" aria-label="Contact Us" id="contact">
+    <section aria-labelledby="registeration-from" class="section has-background-light" id="register-form">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2" id="contact-us">Contact us</h2>
-          <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
+          <h2 class="title is-2" id="registeration-from">Registeration Form</h2>
+          <div class="subtitle is-5">Don't hesitate, ask anything</div>
         </div>
 
-        <form class="column is-half is-offset-one-quarter box">
+        <form aria-labelledby="register" class="column is-half is-offset-one-quarter box" id="mainForm" onsubmit="//TODO" action="#" novalidate>
           <fieldset class="visually-hidden">
-            <legend id="contact-form">Contact Form</legend>
+            <legend id="register">Registeration Form</legend>  
           </fieldset>
 
-          <fieldset>
-            <legend class="visually-hidden">User Related Fields</legend>
-
-            <div class="field">
-              <label class="label" for="name">Name</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Enter your name" aria-invalid="false" id="name">
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label" for="username">Username</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-success" type="text" id="username" placeholder="Enter your username" aria-invalid="false">
-                <span class="icon is-small is-left">
-                  <span class="fas fa-user" aria-hidden="true"></span>
-                </span>
-                <span class="icon is-small is-right">
-                  <span class="fas fa-check" aria-hidden="true"></span>
-                </span>
-              </div>
-              <p class="help is-success">This username is available</p>
-            </div>
-
-            <div class="field">
-              <label class="label" for="email">Email</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-danger" type="email" placeholder="Enter your email" aria-invalid="false" value="hello@" id="email">
-                <span class="icon is-small is-left">
-                  <span class="fas fa-envelope" aria-hidden="true"></span>
-                </span>
-                <span class="icon is-small is-right">
-                  <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                </span>
-              </div>
-              <p class="help is-danger">This email is invalid</p>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="visually-hidden">Message Related Fields</legend>
-
-            <div class="field">
-              <label class="label" for="subject">
-                <span class="visually-hidden">Message's:</span>
-                Subject
-              </label>
-              <div class="control">
-                <div class="select">
-                  <select id="subject">
-                    <optgroup label="List of subjects">
-                      <option>Select dropdown</option>
-                      <option>With options</option>
-                    </optgroup>
-                  </select>
+          <p aria-hidden="true" class="req-msg">Fields marked with <span>*</span> are required</p>
+          
+            <div class="field required">
+                <label class="label" for="username">Username</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="text" id="username" placeholder="Pick up a username" aria-required="true" aria-describedby="username-help">
+                  <span class="icon is-small is-left">
+                    <span class="fas fa-user" aria-hidden="true"></span> 
+                  </span>                 
+                  <span class="icon is-small is-right">
+                    <span class="fas" aria-hidden="true"></span>
+                  </span> 
                 </div>
+                <p class="help" id="username-help"></p>
               </div>
-            </div>
 
-            <div class="field">
-              <label class="label" for="message">Message</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="Enter your mesasage" id="message"></textarea>
+            <fieldset>    
+                <legend class="visually-hidden">Full name</legend>
+
+                <div class="field required">
+                    <label class="label" for="your-name">First Name</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="text" placeholder="Enter first name" id="your-name" aria-required="true" aria-describedby="firstname-help">
+                        <span class="icon is-small is-left">
+                            <span class="fas fa-user" aria-hidden="true"></span> 
+                        </span>
+                        <span class="icon is-small is-right">
+                          <span class="fas" aria-hidden="true"></span>
+                        </span> 
+                    </div>
+                    <p class="help" id="firstname-help"></p>
+                </div>
+
+                <div class="field required">
+                <label class="label" for="last-name">Last Name</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Enter last name" id="last-name" aria-required="true" aria-describedby="lastname-help">
+                    <span class="icon is-small is-left">
+                        <span class="fas fa-user" aria-hidden="true"></span> 
+                    </span>
+                    <span class="icon is-small is-right">
+                      <span class="fas" aria-hidden="true"></span>
+                    </span> 
+                </div>
+                    <p class="help" id="lastname-help"></p>
+                </div>
+            </fieldset>  
+
+            <div class="field required">
+              <label class="label" for="your-email">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Enter your email, example hello@mail.ru" value="" id="your-email" aria-required="true" aria-required="true" aria-describedby="mail-help mailValidationResult">
+                <span class="icon is-small is-left">
+                  <span class="fas fa-envelope" aria-hidden="true"></span> 
+                </span>
+                <span class="icon is-small is-right">
+                    <span class="fas" aria-hidden="true"></span>
+                  </span> 
               </div>
+              <p class="help" aria-live="polite" id="mail-help"></p>
+              <p class="help" aria-live="polite" id="focus-info"></p>
             </div>
-
-          </fieldset>
+          
 
           <fieldset>
-            <legend class="visually-hidden">Terms and conditions</legend>
-            <div class="field">
-              <div class="control">
-                <label class="checkbox" for="agree">
-                  <input type="checkbox" id="agree" aria-required="true" aria-checked="false">
-                  I agree to the <a href="#">terms and conditions</a>
-                </label>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="control">
-                <label class="radio" for="yes">
-                  <input type="radio" name="question" id="yes" aria-checked="false">
-                  Yes
-                </label>
-                <label class="radio" for="no">
-                  <input type="radio" name="question" id="no" aria-checked="false">
-                  No
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="visually-hidden">Form Actions</legend>
             <div class="field is-grouped">
+              <legend class="visually-hidden">Form actions</legend>
               <div class="control">
-                <button class="button is-link">Submit</button>
+                <button class="button is-link" type="submit">Submit</button>
               </div>
               <div class="control">
-                <button class="button is-text">Cancel</button>
+                <button class="button is-text" type="reset">Cancel</button>
               </div>
             </div>
           </fieldset>
+
         </form>
       </div>
     </section>
@@ -1506,6 +1479,7 @@
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
+  <script async src="js/form.js"></script>
 </body>
 
 </html>
