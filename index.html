@@ -17,7 +17,7 @@
       <li class="skip-title">Skip To</li>
       <li><a href="#main-content" class="skip-link">Header</a></li>
       <li><a href="#main-content" class="skip-link">Main Content</a></li>
-      <li><a href="#register-form" class="skip-link">Registration Form</a></li>
+      <li><a href="#register" class="skip-link">Registration Form</a></li>
       <li><a href="#footer" class="skip-link">Footer</a></li>
       <li class="skip-title">Page Outline</li>
       <li><a href="#engineering" class="skip-link">Engineering the Future</a></li>
@@ -30,7 +30,7 @@
       <li><a href="#services" class="skip-link">Services</a></li>
       <li><a href="#portfolio" class="skip-link">Portfolio</a></li>
       <li><a href="#forum" class="skip-link">Forum</a></li>
-      <li><a href="#register-form" class="skip-link">Registration Form</a></li>
+      <li><a href="#register" class="skip-link">Registration Form</a></li>
       <li><a href="#summary" class="skip-link">Summary</a></li>
     </ul>
 
@@ -390,7 +390,7 @@
             <span>Article</span>
           </button>
           <button data-target="pane-3" id="tab3" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
-            <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true" ></span> </span>
+            <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true"></span> </span>
             <span>Team</span>
           </button>
           <button data-target="pane-4" id="tab4" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
@@ -1154,95 +1154,97 @@
       </div>
     </section>
 
-    <section aria-labelledby="registeration-from" class="section has-background-light" id="register-form">
+    <section aria-label="registration-form" class="section has-background-light" id="register">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2" id="registeration-from">Registeration Form</h2>
+          <h2 class="title is-2" id="registration-form">Registration Form</h2>
           <div class="subtitle is-5">Don't hesitate, ask anything</div>
         </div>
 
-        <form aria-labelledby="register" class="column is-half is-offset-one-quarter box" id="mainForm" onsubmit="//TODO" action="#" novalidate>
+        <form class="column is-half is-offset-one-quarter box register-form" action="post" >
           <fieldset class="visually-hidden">
-            <legend id="register">Registeration Form</legend>  
+            <legend id="register-form">Register Form</legend>
           </fieldset>
 
-          <p aria-hidden="true" class="req-msg">Fields marked with <span>*</span> are required</p>
-          
-            <div class="field required">
-                <label class="label" for="username">Username</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input class="input" type="text" id="username" placeholder="Pick up a username" aria-required="true" aria-describedby="username-help">
-                  <span class="icon is-small is-left">
-                    <span class="fas fa-user" aria-hidden="true"></span> 
-                  </span>                 
-                  <span class="icon is-small is-right">
-                    <span class="fas" aria-hidden="true"></span>
-                  </span> 
-                </div>
-                <p class="help" id="username-help"></p>
-              </div>
+          <div class="fail-block message is-danger" tabindex="-1">
+            <h3 class="message-header">There are multiple errors in the form</h3>
+            <ol class="error-messages message-body"></ol>
+          </div>
+          <div class="success-block message is-success" tabindex="-1">
+            <h3 class="message-header">The form has been successefully submitted</h3>
+          </div>
 
-            <fieldset>    
-                <legend class="visually-hidden">Full name</legend>
-
-                <div class="field required">
-                    <label class="label" for="your-name">First Name</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="text" placeholder="Enter first name" id="your-name" aria-required="true" aria-describedby="firstname-help">
-                        <span class="icon is-small is-left">
-                            <span class="fas fa-user" aria-hidden="true"></span> 
-                        </span>
-                        <span class="icon is-small is-right">
-                          <span class="fas" aria-hidden="true"></span>
-                        </span> 
-                    </div>
-                    <p class="help" id="firstname-help"></p>
-                </div>
-
-                <div class="field required">
-                <label class="label" for="last-name">Last Name</label>
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="text" placeholder="Enter last name" id="last-name" aria-required="true" aria-describedby="lastname-help">
-                    <span class="icon is-small is-left">
-                        <span class="fas fa-user" aria-hidden="true"></span> 
-                    </span>
-                    <span class="icon is-small is-right">
-                      <span class="fas" aria-hidden="true"></span>
-                    </span> 
-                </div>
-                    <p class="help" id="lastname-help"></p>
-                </div>
-            </fieldset>  
-
-            <div class="field required">
-              <label class="label" for="your-email">Email</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Enter your email, example hello@mail.ru" value="" id="your-email" aria-required="true" aria-required="true" aria-describedby="mail-help mailValidationResult">
-                <span class="icon is-small is-left">
-                  <span class="fas fa-envelope" aria-hidden="true"></span> 
-                </span>
-                <span class="icon is-small is-right">
-                    <span class="fas" aria-hidden="true"></span>
-                  </span> 
-              </div>
-              <p class="help" aria-live="polite" id="mail-help"></p>
-              <p class="help" aria-live="polite" id="focus-info"></p>
-            </div>
-          
+          <p aria-hidden="true" class="req-msg">Required fields are marked with <span>*</span></p>
 
           <fieldset>
-            <div class="field is-grouped">
-              <legend class="visually-hidden">Form actions</legend>
+            <legend class="visually-hidden">User Related details</legend>
+            <div class="field required">
+              <label class="label" for="username">Username</label>
               <div class="control">
-                <button class="button is-link" type="submit">Submit</button>
+                <input class="input" id="username" name="username" type="text" placeholder="Enter your username" aria-required="true">
               </div>
+              <p class="help is-danger" id="username-help">Username is invalid</p>
+            </div>
+
+            <div class="field required">
+              <label class="label" for="first-name">First Name</label>
               <div class="control">
-                <button class="button is-text" type="reset">Cancel</button>
+                <input class="input" id="first-name" name="first-name" type="text" placeholder="Enter your first name" aria-required="true">
               </div>
+              <p class="help is-danger" id="first-name-help">First name is invalid</p>
+            </div>
+
+            <div class="field required">
+              <label class="label" for="last-name">Last Name</label>
+              <div class="control">
+                <input class="input" id="last-name" name="last-name" type="text" placeholder="Enter your last name" aria-required="true">
+              </div>
+              <p class="help is-danger" id="last-name-help">Last name is invalid</p>
+            </div>
+
+            <div class="field" aria-live="assertive" aria-atomic="true">
+              <label for="birth-year" class="label">Birth year</label>
+              <div class="control">
+                <input class="input" id="birth-year" name="birth-year" type="number" placeholder="Enter your birth year" disabled aria-required="true">
+              </div>
+              <p class="help is-danger" id="birth-year-help">Please, fill in birth year</p>
+            </div>
+
+            <div class="field required">
+              <label class="label" for="email">Email</label>
+              <div class="control">
+                <input class="input" id="email" name="email" type="email" placeholder="Enter your email" aria-required="true">
+              </div>
+              <p class="help is-danger" id="email-help">This email is invalid</p>
+            </div>
+
+            <div class="field required">
+              <label class="label" for="phone-number">Phone number</label>
+              <div class="control">
+                <input class="input" id="phone-number" name="phone-number" type="tel" placeholder="Enter your phone number" aria-required="true">
+              </div>
+              <p class="help is-danger" id="phone-number-help">Phone number is invalid</p>
+            </div>
+
+            <div class="field">
+              <label class="label" for="zip-code">Zip code</label>
+              <div class="control">
+                <input class="input" id="zip-code" name="zip-code" type="text" placeholder="Enter your zip code">
+              </div>
+            </div>
+
+            <div class="field required">
+              <label class="label" for="address">Address</label>
+              <div class="control">
+                <input class="input" id="address" name="address" type="text" placeholder="Enter your address" aria-required="true">
+              </div>
+              <p class="help is-danger" id="address-help">Address is invalid</p>
             </div>
           </fieldset>
 
-        </form>
+          <button class="button is-link register-button">Submit</button>
+      </div>
+      </form>
       </div>
     </section>
 
@@ -1478,6 +1480,7 @@
   </div>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
   <script async src="js/custom.js"></script>
   <script async src="js/form.js"></script>
 </body>

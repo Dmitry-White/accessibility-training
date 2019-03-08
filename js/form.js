@@ -1,238 +1,159 @@
 
-const users = [];
-const invalid = [];
-const user = {};
-let checkYear = false;
+const USERS = [];
+const INPUTS = [...document.querySelectorAll(".register-form input")];
+
+const failBlock = document.querySelector(".fail-block");
+const successBlock = document.querySelector(".success-block");
+const errorMessages = document.querySelector(".error-messages");
+const yearInput = document.getElementById("birth-year");
+const emailInput = document.getElementById("email");
+const emailHelp = document.getElementById("email-help");
+const registerButton = document.querySelector(".register-button");
+
+let inputsEnabled, lastSavedEmail;
+const emailDiv = emailInput.parentNode.parentNode;
 
 
-const username = document.querySelector("#username");
-const fName = document.querySelector("#your-name");
-const lName = document.querySelector("#last-name");
-const email = document.querySelector("#your-email");
-const focusMsg = document.querySelector("#focus-info");
-let helpTxt;
-let isInvalid;
-let mailValid;
+// ------------------------ Utility functions -------------------------------
+const refreshInputs = () => (
+  inputsEnabled = [
+    ...document.querySelectorAll(".register-form input[aria-required]:not([disabled])")
+  ]
+);
 
-const mailValResult = document.createElement("p");
-mailValResult.setAttribute("id", "mailValidationResult");
-mailValResult.setAttribute("aria-live", "polite");
-document.querySelector("#mainForm").append(mailValResult);
+const clearInputs = () => {
+  INPUTS.forEach(input => input.value = '');
+  yearInput.setAttribute("disabled", true);
+  emailDiv.classList.remove("valid-field");
+  refreshInputs();
+}
 
+const hideMessages = () => {
+  successBlock.classList.remove("active-block");
+  failBlock.classList.remove("active-block");
+}
+// --------------------------------------------------------------------------
 
-email.addEventListener("blur", () => {
-    mailValResult.innerText = "";
-    focusMsg.innerText = "";
+// ----------------------- Processing functions -----------------------------
+const processInvalid = (input, id) => {
+  input.setAttribute("aria-describedby", id);
+  input.setAttribute("aria-invalid", true);
+  input.parentNode.parentNode.classList.add("invalid-field");
+}
 
-    iconRight = this.nextElementSibling.nextElementSibling.children[0];
-    fieldHelp = this.parentElement.nextElementSibling;
+const processValid = input => {
+  input.removeAttribute("aria-describedby");
+  input.removeAttribute("aria-invalid");
+  input.parentNode.parentNode.classList.remove("invalid-field");
+}
 
-    fieldHelp.innerText = "Email validation has started. Please wait, it can take some time";
-    fieldHelp.classList.add("is-validationmsg");
-    fieldHelp.classList.remove("is-danger");
-    fieldHelp.classList.remove("is-success");
+const processError = (input, message) => {
+  const inputName = input.getAttribute("name");
+  const inputHelpId = inputName + "-help";
+  const error = `<li><a href="#${inputName}">${message}</a></li>`;
 
+  processInvalid(input, inputHelpId);
+  return { error };
+}
+// --------------------------------------------------------------------------
 
-    this.classList.add("is-validationmsg");
-    this.classList.remove("is-danger");
-    this.classList.remove("is-success");
+// ------------------------ Validation functions-----------------------------
+const validateField = input => {
+  const inputName = input.getAttribute("name");
 
-    email.onfocus = () => {
-        email.onkeyup = e => {
-            if (e.which == 9) focusMsg.innerText = "Please don't move focus until validation ends";
-        }
-    };
+  if (!input.value) {
+    const inputHelpMessage = input.placeholder;
+    return processError(input, inputHelpMessage);
+  }
+
+  if (input.name === "user-name" && _.find(USERS, { "user-name": input.value })) {
+    const inputHelpMessage = "This username is in use yet, please choose another username";
+    return processError(input, inputHelpMessage);
+  }
+  
+  if (input.name === "birth-year" && (!/^[0-9]*$/.test(input.value) || input.value.length !== 4)) {
+    const inputHelpMessage = "The birth year should be 4-digits number";
+    return processError(input, inputHelpMessage);
+  }
+
+  if (input.name === "phone-number" && !/^[0-9]*$/.test(input.value)) {
+    const inputHelpMessage = "The phone number should contain numbers only";
+    return processError(input, inputHelpMessage);
+  }
+
+  if (input.name === "email" && emailDiv.classList.contains("invalid-field")) {
+    const inputHelpMessage = emailHelp.innerHTML;
+    return processError(input, inputHelpMessage);
+  }
+
+  processValid(input);
+
+  return {
+    user: { [inputName]: input.value }
+  }
+}
+
+const validateEmail = e => {
+  emailInput.setAttribute("aria-labelledby", "email-help");
+  
+  if (emailInput.value !== lastSavedEmail) {
+    const inputHelpMessage = "The email is validating, please wait";
+    emailHelp.innerHTML = inputHelpMessage;
+    emailDiv.classList.add("invalid-field");
 
     setTimeout(() => {
-        if (validateMail(email)) mailValResult.innerText = "Mail validated, value accepted";
-        else mailValResult.innerText = "Mail validated, value not accepted";
+      if (!emailInput.value) emailHelp.innerHTML = "The email is empty";
+      else if (!/[^@]+@[^\.]+\..+/g.test(emailInput.value)) emailHelp.innerHTML = "The email has invalid format";
+      else if (_.find(USERS, {"email": emailInput.value})) emailHelp.innerHTML = "The email is already used";
+      else {
+        emailHelp.innerHTML = "The email is valid";
+        emailDiv.classList.remove("invalid-field");
+        emailDiv.classList.add("valid-field");
+      }
+    }, 1000);
+  }
 
-        focusMsg.innerText = "";
-    }, 3000);
-});
+  lastSavedEmail = emailInput.value;
+}
+// --------------------------------------------------------------------------
 
+// ------------------------- Flow functions ---------------------------------
+const submitForm = e => {
+  e.preventDefault();
 
-function formValidation() {
-    user = {
-        nik: "",
-        name: "",
-        email: "",
-    };
+  let userData = {};
+  let errors = '';
+  hideMessages();
 
-    invalid = [];
-    errorsAlert = document.querySelectorAll(".errors-alert");
+  inputsEnabled.forEach(input => {
+    const res = validateField(input);
+    if (res.error) errors += res.error;
+    else userData = _.assign(userData, res.user);
+  });
 
-    if (errorsAlert.length) errorsAlert[0].remove();
+  if (errors) {
+    failBlock.classList.add("active-block");
+    errorMessages.innerHTML = errors;
+    failBlock.focus();
+  } else {
+    isExistingUser = _.find(USERS, { "first-name": userData["first-name"], "last-name": userData["last-name"] });
 
-    const listOfErrors = document.createElement("ol");
-    const errorsTitle = document.createElement("p");
-    const errorsBlock = document.createElement("div");
-
-    errorsTitle.innerText = "Error! The form could not be submitted due to invalid entries. Please fix the following:";
-    errorsTitle.setAttribute("class", "title is-4");
-    errorsBlock.setAttribute("class", "errors-alert");
-    errorsBlock.setAttribute("tabindex", "-1");
-
-    document.querySelector("#mainForm").parentElement.prepend(errorsBlock);
-
-    validateUsername(username);
-    validateName(fName);
-    validateLastName(lName);
-    validateMail(email);
-
-    if (invalid.length > 0) {
-        invalid[0].focus();
-
-        invalid.forEach(el => {
-            const link = document.createElement("a");
-            link.setAttribute("href", "#" + el.id);
-            link.innerHTML = el.placeholder;
-
-            const linkItem = document.createElement("li");
-            linkItem.append(link);
-            listOfErrors.append(linkItem);
-        });
-
-        errorsBlock.append(errorsTitle);
-        errorsBlock.append(listOfErrors);
-        errorsBlock.focus();
+    if (isExistingUser && yearInput.disabled) {
+      yearInput.removeAttribute("disabled");
+      processInvalid(yearInput);
+      yearInput.focus();
+      refreshInputs();
     } else {
-        users.push(user);
-        alert("Your profile has been created, data has been saved");
+      successBlock.classList.add("active-block");
+      successBlock.focus();
+      USERS.push(userData);
+      clearInputs();
+      lastSavedEmail = undefined;
     }
+  }
 }
+// --------------------------------------------------------------------------
 
-function isEmpty(field) {
-    let fieldValue = field.value;
-    let label = field.parentElement.previousElementSibling.textContent;
-    isInvalid = false;
-
-    if (fieldValue.length == 0) {
-        helpTxt = "Please fill in " + label;
-        isInvalid = true;
-        mailValid = false;
-        successErrorHandler(field, helpTxt, isInvalid);
-        return true;
-    }
-};
-
-function validateUsername(field) {
-    var fieldValue = field.value;
-    isInvalid = false;
-
-    if (!isEmpty(field)) {
-        var found = users.some(function (el) {
-            return el.nik === fieldValue;
-        });
-
-        if (!found) {
-            user.nik = fieldValue;
-        }
-        else {
-            helpTxt = "This username is not available. Please create another one";
-            isInvalid = true;
-        }
-
-        successErrorHandler(field, helpTxt, isInvalid);
-    }
-}
-
-function validateName(field) {
-    var fieldValue = field.value;
-    isInvalid = false;
-
-    if (!isEmpty(field)) {
-        user.name = fieldValue;
-        successErrorHandler(field);
-    }
-
-}
-
-function validateLastName(field) {
-    var fieldValue = field.value;
-    isInvalid = false;
-
-    if (!isEmpty(field)) {
-        var fullName = user.name + " " + fieldValue;
-
-        var found = users.some(function (el) {
-            return el.name === fullName;
-        });
-
-        var year = document.querySelector("#year");
-
-        if (!found) {
-            user.name = fullName;
-            successErrorHandler(field);
-            year.setAttribute("aria-disabled", true);
-            year.removeAttribute("aria-required");
-        }
-        else {
-            alert("User with same name already exists. Please fill in year of birth, exapmple 1999");
-            year.removeAttribute("aria-disabled");
-            year.setAttribute("aria-required", true);
-            year.focus();
-            checkYear = true;
-        }
-    }
-
-}
-
-function validateMail(field) {
-    let fieldValue = field.value;
-    const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    isInvalid = false;
-    mailValid = true;
-
-    if (!isEmpty(field)) {
-
-        if (!reg.test(String(fieldValue).toLowerCase())) {
-            helpTxt = "Please enter valid email, ex. hello@hello.com";
-            isInvalid = true;
-            mailValid = false;
-        }
-        successErrorHandler(field, helpTxt, isInvalid);
-    }
-    return mailValid;
-}
-
-function successErrorHandler(field, helpTxt, isInvalid) {
-    let helpTxt = helpTxt;
-
-    iconRight = field.nextElementSibling.nextElementSibling.children[0],
-        fieldHelp = field.parentElement.nextElementSibling;
-
-    if (isInvalid) {
-        fieldHelp.classList.add("is-danger");
-        fieldHelp.classList.remove("is-success");
-        fieldHelp.classList.remove("is-validationmsg");
-
-        field.classList.add("is-danger");
-        field.classList.remove("is-success");
-        field.classList.remove("is-validationmsg");
-        field.setAttribute("aria-invalid", true);
-
-        iconRight.classList.remove("fa-check");
-        iconRight.classList.add("fa-exclamation-triangle");
-
-        invalid.push(field);
-    }
-
-    else {
-        field.classList.remove("is-danger");
-        field.classList.remove("is-validationmsg");
-        field.classList.add("is-success");
-        field.removeAttribute("aria-invalid");
-
-        fieldHelp.classList.add("is-success");
-        fieldHelp.classList.remove("is-validationmsg");
-        fieldHelp.classList.remove("is-danger");
-
-        iconRight.classList.add("fa-check");
-        iconRight.classList.remove("fa-exclamation-triangle");
-
-        helpTxt = "Value accepted";
-    }
-
-    fieldHelp.innerText = helpTxt;
-}
+refreshInputs();
+registerButton.addEventListener("click", submitForm);
+emailInput.addEventListener("blur", validateEmail);
