@@ -12,6 +12,7 @@
 .tabs {
   margin-bottom: -1px !important;
   position: relative;
+  overflow: visible;
 }
 .tab-content {
   padding: 2rem;
@@ -323,6 +324,33 @@ button.skipnav-button:hover {
 
 .is-active > .skipnav-dropdown {
   display: block;
+}
+
+.tab-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero.is-info .tabs.is-boxed .tab-button{
+  background: transparent;
+  border: none;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
+  font-size: inherit;
+  padding: 10px 15px;
+}
+
+.hero.is-info .tabs.is-boxed .tab-button:hover{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero.is-info .tabs.is-boxed .tab-button.is-active,
+.hero.is-info .tabs.is-boxed .tab-button.is-active:hover {
+  background: #fff;
+  color: #0a478e;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1087px) {

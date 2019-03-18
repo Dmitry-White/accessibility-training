@@ -379,38 +379,30 @@
         </div>
       </div>
       <div class="tabs is-boxed is-centered main-menu" id="nav">
-        <ul role="tablist">
-          <li data-target="pane-1" id="tab-1" role="tab" aria-selected="false">
-            <button>
-              <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span></span>
-              <span>Pictures</span>
-            </button>
-          </li>
-          <li data-target="pane-2" id="tab-2" class="is-active" role="tab" aria-selected="true">
-            <button>
-              <span class="icon is-small"><span class="fab fa-empire" aria-hidden="true"></span></span>
-              <span>Article</span>
-            </button>
-          </li>
-          <li data-target="pane-3" id="tab-3" role="tab" aria-selected="false">
-            <button>
-              <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true"></span></span>
-              <span>Team</span>
-            </button>
-          </li>
-          <li data-target="pane-4" id="tab-4" role="tab" aria-selected="false">
-            <button>
-              <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span></span>
-              <span>Video</span>
-            </button>
-          </li>
-        </ul>
+        <div role="tablist" aria-labelledby="topics" class="tab-list">
+          <button data-target="pane-1" id="tab1" class="is-active tab-button" role="tab" aria-selected="true" aria-controls="pane-1">
+            <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span> </span>
+            <span id="tab-1">Pictures</span>
+          </button>
+          <button data-target="pane-2" id="tab2" class="tab-button" role="tab" aria-selected="false" aria-controls="pane-2" tabindex="-1">
+            <span class="icon is-small"><span class="fab fa-empire" aria-hidden="true"></span> </span>
+            <span id="tab-2">Article</span>
+          </button>
+          <button data-target="pane-3" id="tab3" class="tab-button" role="tab" aria-selected="false" aria-controls="pane-3" tabindex="-1">
+            <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true" ></span> </span>
+            <span id="tab-3">Team</span>
+          </button>
+          <button data-target="pane-4" id="tab4" class="tab-button" role="tab" aria-selected="false" aria-controls="pane-4" tabindex="-1">
+            <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span> </span>
+            <span id="tab-4">Video</span>
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="section tab-content container" aria-label="Topic Tabs" id="tabs">
 
-      <div class="tab-pane" id="pane-1" class="level" role="tabpanel" aria-labelledby="tab-1">
+      <div class="tab-pane is-active" id="pane-1" class="level" role="tabpanel" aria-labelledby="tab-1">
         <div class="container">
           <div class="columns features">
 
@@ -478,7 +470,7 @@
         </div>
       </div>
 
-      <div class="tab-pane is-active" id="pane-2" role="tabpanel" aria-labelledby="tab-1">
+      <div class="tab-pane" id="pane-2" role="tabpanel" aria-labelledby="tab-1">
         <div class="content">
 
           <h1 class="is-1 title">Hello World</h1>
@@ -1514,6 +1506,7 @@
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
+  <script async src="js/tabs.js"></script>
 </body>
 
 </html>
