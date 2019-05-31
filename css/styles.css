@@ -12,6 +12,7 @@
 .tabs {
   margin-bottom: -1px !important;
   position: relative;
+  overflow: visible;
 }
 .tab-content {
   padding: 2rem;
@@ -333,7 +334,6 @@ button.skipnav-button:hover {
   justify-content: center;
   width: 100%;
 }
-
 
 .hero.is-info .tabs.is-boxed .tab-button.is-active,
 .hero.is-info .tabs.is-boxed .tab-button.is-active:hover {
