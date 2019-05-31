@@ -17,6 +17,7 @@
       <li class="skip-title">Skip To</li>
       <li><a href="#main-content" class="skip-link">Header</a></li>
       <li><a href="#main-content" class="skip-link">Main Content</a></li>
+      <li><a href="#register" class="skip-link">Registration Form</a></li>
       <li><a href="#footer" class="skip-link">Footer</a></li>
       <li class="skip-title">Page Outline</li>
       <li><a href="#engineering" class="skip-link">Engineering the Future</a></li>
@@ -29,7 +30,7 @@
       <li><a href="#services" class="skip-link">Services</a></li>
       <li><a href="#portfolio" class="skip-link">Portfolio</a></li>
       <li><a href="#forum" class="skip-link">Forum</a></li>
-      <li><a href="#contact" class="skip-link">Contact Us</a></li>
+      <li><a href="#register" class="skip-link">Registration Form</a></li>
       <li><a href="#summary" class="skip-link">Summary</a></li>
     </ul>
 
@@ -380,21 +381,21 @@
       </div>
       <div class="tabs is-boxed is-centered main-menu" id="nav">
         <div role="tablist" aria-labelledby="topics" class="tab-list">
-          <button data-target="pane-1" id="tab1" class="is-active tab-button" role="tab" aria-selected="true" aria-controls="pane-1">
+          <button data-target="pane-1" id="tab1" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
             <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span> </span>
-            <span id="tab-1">Pictures</span>
+            <span>Pictures</span>
           </button>
-          <button data-target="pane-2" id="tab2" class="tab-button" role="tab" aria-selected="false" aria-controls="pane-2" tabindex="-1">
+          <button data-target="pane-2" id="tab2" class="is-active tab-button" role="tab" aria-selected="true">
             <span class="icon is-small"><span class="fab fa-empire" aria-hidden="true"></span> </span>
-            <span id="tab-2">Article</span>
+            <span>Article</span>
           </button>
-          <button data-target="pane-3" id="tab3" class="tab-button" role="tab" aria-selected="false" aria-controls="pane-3" tabindex="-1">
-            <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true" ></span> </span>
-            <span id="tab-3">Team</span>
+          <button data-target="pane-3" id="tab3" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
+            <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true"></span> </span>
+            <span>Team</span>
           </button>
-          <button data-target="pane-4" id="tab4" class="tab-button" role="tab" aria-selected="false" aria-controls="pane-4" tabindex="-1">
+          <button data-target="pane-4" id="tab4" role="tab" aria-selected="false" tabindex="-1" class="tab-button">
             <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span> </span>
-            <span id="tab-4">Video</span>
+            <span>Video</span>
           </button>
         </div>
       </div>
@@ -1153,123 +1154,97 @@
       </div>
     </section>
 
-    <section class="section has-background-light" aria-label="Contact Us" id="contact">
+    <section aria-label="registration-form" class="section has-background-light" id="register">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2" id="contact-us">Contact us</h2>
-          <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
+          <h2 class="title is-2" id="registration-form">Registration Form</h2>
+          <div class="subtitle is-5">Don't hesitate, ask anything</div>
         </div>
 
-        <form class="column is-half is-offset-one-quarter box">
+        <form class="column is-half is-offset-one-quarter box register-form" action="post" >
           <fieldset class="visually-hidden">
-            <legend id="contact-form">Contact Form</legend>
+            <legend id="register-form">Register Form</legend>
           </fieldset>
 
+          <div class="fail-block message is-danger" tabindex="-1">
+            <h3 class="message-header">There are multiple errors in the form</h3>
+            <ol class="error-messages message-body"></ol>
+          </div>
+          <div class="success-block message is-success" tabindex="-1">
+            <h3 class="message-header">The form has been successefully submitted</h3>
+          </div>
+
+          <p aria-hidden="true" class="req-msg">Required fields are marked with <span>*</span></p>
+
           <fieldset>
-            <legend class="visually-hidden">User Related Fields</legend>
-
-            <div class="field">
-              <label class="label" for="name">Name</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Enter your name" aria-invalid="false" id="name">
-              </div>
-            </div>
-
-            <div class="field">
+            <legend class="visually-hidden">User Related details</legend>
+            <div class="field required">
               <label class="label" for="username">Username</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-success" type="text" id="username" placeholder="Enter your username" aria-invalid="false">
-                <span class="icon is-small is-left">
-                  <span class="fas fa-user" aria-hidden="true"></span>
-                </span>
-                <span class="icon is-small is-right">
-                  <span class="fas fa-check" aria-hidden="true"></span>
-                </span>
+              <div class="control">
+                <input class="input" id="username" name="username" type="text" placeholder="Enter your username" aria-required="true">
               </div>
-              <p class="help is-success">This username is available</p>
+              <p class="help is-danger" id="username-help">Username is invalid</p>
             </div>
 
-            <div class="field">
+            <div class="field required">
+              <label class="label" for="first-name">First Name</label>
+              <div class="control">
+                <input class="input" id="first-name" name="first-name" type="text" placeholder="Enter your first name" aria-required="true">
+              </div>
+              <p class="help is-danger" id="first-name-help">First name is invalid</p>
+            </div>
+
+            <div class="field required">
+              <label class="label" for="last-name">Last Name</label>
+              <div class="control">
+                <input class="input" id="last-name" name="last-name" type="text" placeholder="Enter your last name" aria-required="true">
+              </div>
+              <p class="help is-danger" id="last-name-help">Last name is invalid</p>
+            </div>
+
+            <div class="field" aria-live="assertive" aria-atomic="true">
+              <label for="birth-year" class="label">Birth year</label>
+              <div class="control">
+                <input class="input" id="birth-year" name="birth-year" type="number" placeholder="Enter your birth year" disabled aria-required="true">
+              </div>
+              <p class="help is-danger" id="birth-year-help">Please, fill in birth year</p>
+            </div>
+
+            <div class="field required">
               <label class="label" for="email">Email</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-danger" type="email" placeholder="Enter your email" aria-invalid="false" value="hello@" id="email">
-                <span class="icon is-small is-left">
-                  <span class="fas fa-envelope" aria-hidden="true"></span>
-                </span>
-                <span class="icon is-small is-right">
-                  <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                </span>
-              </div>
-              <p class="help is-danger">This email is invalid</p>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="visually-hidden">Message Related Fields</legend>
-
-            <div class="field">
-              <label class="label" for="subject">
-                <span class="visually-hidden">Message's:</span>
-                Subject
-              </label>
               <div class="control">
-                <div class="select">
-                  <select id="subject">
-                    <optgroup label="List of subjects">
-                      <option>Select dropdown</option>
-                      <option>With options</option>
-                    </optgroup>
-                  </select>
-                </div>
+                <input class="input" id="email" name="email" type="email" placeholder="Enter your email" aria-required="true">
               </div>
+              <p class="help is-danger" id="email-help">This email is invalid</p>
+            </div>
+
+            <div class="field required">
+              <label class="label" for="phone-number">Phone number</label>
+              <div class="control">
+                <input class="input" id="phone-number" name="phone-number" type="tel" placeholder="Enter your phone number" aria-required="true">
+              </div>
+              <p class="help is-danger" id="phone-number-help">Phone number is invalid</p>
             </div>
 
             <div class="field">
-              <label class="label" for="message">Message</label>
+              <label class="label" for="zip-code">Zip code</label>
               <div class="control">
-                <textarea class="textarea" placeholder="Enter your mesasage" id="message"></textarea>
+                <input class="input" id="zip-code" name="zip-code" type="text" placeholder="Enter your zip code">
               </div>
             </div>
 
-          </fieldset>
-
-          <fieldset>
-            <legend class="visually-hidden">Terms and conditions</legend>
-            <div class="field">
+            <div class="field required">
+              <label class="label" for="address">Address</label>
               <div class="control">
-                <label class="checkbox" for="agree">
-                  <input type="checkbox" id="agree" aria-required="true" aria-checked="false">
-                  I agree to the <a href="#">terms and conditions</a>
-                </label>
+                <input class="input" id="address" name="address" type="text" placeholder="Enter your address" aria-required="true">
               </div>
-            </div>
-
-            <div class="field">
-              <div class="control">
-                <label class="radio" for="yes">
-                  <input type="radio" name="question" id="yes" aria-checked="false">
-                  Yes
-                </label>
-                <label class="radio" for="no">
-                  <input type="radio" name="question" id="no" aria-checked="false">
-                  No
-                </label>
-              </div>
+              <p class="help is-danger" id="address-help">Address is invalid</p>
             </div>
           </fieldset>
 
-          <fieldset>
-            <legend class="visually-hidden">Form Actions</legend>
-            <div class="field is-grouped">
-              <div class="control">
-                <button class="button is-link">Submit</button>
-              </div>
-              <div class="control">
-                <button class="button is-text">Cancel</button>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+          <button class="button is-link register-button">Submit</button>
+      </div>
+      </form>
       </div>
     </section>
 
@@ -1505,7 +1480,9 @@
   </div>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
   <script async src="js/custom.js"></script>
+  <script async src="js/form.js"></script>
   <script async src="js/tabs.js"></script>
 </body>
 

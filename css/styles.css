@@ -130,14 +130,17 @@
   background-color: #2a16ee;
 }
 .help.is-danger,
-.tag:not(body).is-danger {
+.tag:not(body).is-danger,
+.message.is-danger .message-header,
+.message.is-danger .message-body {
   background-color: #85144B;
   color: #fff;
 }
 
 .tag:not(body).is-primary,
 .tag:not(body).is-success,
-.help.is-success {
+.help.is-success,
+.message.is-success .message-header {
   background-color: #2ECC40;
   color: #111;
 }
@@ -332,23 +335,10 @@ button.skipnav-button:hover {
   width: 100%;
 }
 
-.hero.is-info .tabs.is-boxed .tab-button{
-  background: transparent;
-  border: none;
-  color: #fff;
-  border-radius: 4px 4px 0 0;
-  opacity: 1;
-  font-size: inherit;
-  padding: 10px 15px;
-}
-
-.hero.is-info .tabs.is-boxed .tab-button:hover{
-  background: rgba(0, 0, 0, 0.1);
-}
-
 .hero.is-info .tabs.is-boxed .tab-button.is-active,
 .hero.is-info .tabs.is-boxed .tab-button.is-active:hover {
-  background: #fff;
+  background: white;
+  border-color: white;
   color: #0a478e;
   opacity: 1;
 }
@@ -357,4 +347,51 @@ button.skipnav-button:hover {
   .navbar-menu {
     background-color: #888;
   }
+}
+
+
+/* Form validation */
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.req-msg {
+  font-size: 14px; 
+  margin-bottom: 1em;
+}
+
+.req-msg span {
+  font-weight: bold;
+  color:#85144B;
+}
+
+.required label:after {
+  background: url(../star.png) no-repeat top right;
+  padding-right: 12px;
+  content: "";
+}
+
+.fail-block,
+.success-block {
+  display: none;
+}
+
+.active-block.fail-block,
+.active-block.success-block {
+  display: block;
+}
+
+.help {
+  display: none;
+}
+
+.invalid-field .help,
+.valid-field .help  {
+  display: block;
+}
+
+.register-button {
+  align-self: center;
+  max-width: 100px;
 }
